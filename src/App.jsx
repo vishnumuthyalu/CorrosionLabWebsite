@@ -9,6 +9,7 @@ import Staff from './pages/Staff'
 import News from './pages/News'
 import Publications from './pages/Publications'
 import Contact from './pages/Contact'
+import Achievements from './pages/Achievements'
 import './App.css'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/staff" element={<Staff />} />
             <Route path="/news" element={<News />} />
             <Route path="/publications" element={<Publications />} />
+            <Route path="/achievements" element={<Achievements />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

@@ -3,64 +3,67 @@ import { Calendar, Award, Users, BookOpen, ExternalLink } from 'lucide-react'
 const News = () => {
   const newsItems = [
     {
-      date: '2024-12-15',
-      category: 'Award',
-      title: 'Dr. Brendy Rincon Troconis Receives 2023 AMPP Early-Career Award',
-      excerpt: 'Professor Brendy Rincon Troconis has been honored with the prestigious 2023 AMPP Early-Career Award for her outstanding contributions to corrosion science and engineering.',
-      content: `Dr. Brendy Rincon Troconis, Principal Investigator of the UTSA Corrosion Research Laboratory, has been recognized with the 2023 AMPP (Association for Materials Protection and Performance) Early-Career Award. This prestigious award recognizes her exceptional contributions to the field of corrosion science and engineering, particularly in the areas of environmentally assisted cracking, atmospheric corrosion, and coating adhesion durability.
-
-      The award highlights Dr. Rincon's leadership in multidisciplinary research projects supported by federal agencies including the US NRC, DOE, and ONR, as well as her commitment to advancing infrastructure sustainability and resiliency through innovative corrosion control strategies.`,
-      icon: <Award size={24} />
+      date: '2017-12-01',
+      category: 'Partnership',
+      title: 'UTSA partners with SwRI on corrosion and energy projects',
+      excerpt: 'The University of Texas at San Antonio (UTSA) and Southwest Research Institute (SwRI) have announced two new research projects, which will receive a total of $250,000 in funding.',
+      content: `The University of Texas at San Antonio (UTSA) and Southwest Research Institute (SwRI) have announced two new research projects, which will receive a total of $250,000 in funding. The first project will research a new technique to mitigate cracking and corrosion in piping and related equipment used by the oil and gas industry. The second will investigate the development of a traffic management system that will be powered using sustainable thermal energy.`,
+      icon: <Users size={24} />,
+      link: 'http://www.utsa.edu/today/2017/12/story/UTSA-SwRIprojects.html'
     },
     {
-      date: '2024-11-20',
-      category: 'Research',
-      title: 'New DOE Funding for High-Temperature Fracture Mechanics Research',
-      excerpt: 'The laboratory has secured significant funding from the Department of Energy for developing advanced fracture mechanics capabilities for high-temperature environments.',
-      content: `The UTSA Corrosion Research Laboratory has been awarded a substantial grant from the U.S. Department of Energy to develop three-dimensional fracture mechanics capabilities for structures operating in high-temperature thermal environments. This research will focus on nuclear and aerospace applications where materials are subjected to extreme thermal and mechanical stresses.
-
-      The project will combine advanced computational modeling with experimental validation to better understand crack propagation mechanisms in high-temperature environments, ultimately leading to improved safety and reliability of critical infrastructure components.`,
-      icon: <BookOpen size={24} />
-    },
-    {
-      date: '2024-10-05',
-      category: 'Collaboration',
-      title: 'Partnership with U.S. Naval Research Laboratory Announced',
-      excerpt: 'New collaborative research program focuses on fatigue behavior of through-hole fastener installations in naval aircraft.',
-      content: `The laboratory has established a new research collaboration with the U.S. Naval Research Laboratory to investigate the fatigue behavior of through-hole fastener installations in naval aircraft. This project, led by doctoral student Viancy Catherine Isaza Zapata, combines experimental and probabilistic approaches to understand the impact of installation variables, galvanic corrosion, and environmental factors on fatigue life.
-
-      The research will contribute to enhanced digital twin capabilities for aerospace maintenance and improved understanding of corrosion-fatigue interactions in critical aircraft components.`,
-      icon: <Users size={24} />
-    },
-    {
-      date: '2024-09-12',
-      category: 'Student Achievement',
-      title: 'Graduate Students Present Research at International Conference',
-      excerpt: 'Laboratory graduate students presented their cutting-edge research findings at the International Corrosion Engineering Conference.',
-      content: `Several graduate students from the UTSA Corrosion Research Laboratory presented their research at the International Corrosion Engineering Conference. The presentations covered a wide range of topics including hydrogen embrittlement in additively manufactured alloys, galvanic corrosion of airframe alloys, and green organic inhibitors for reinforced concrete applications.
-
-      The students received positive feedback from the international corrosion community and established valuable connections for future research collaborations.`,
-      icon: <Users size={24} />
-    },
-    {
-      date: '2024-08-18',
-      category: 'Publication',
-      title: 'Breakthrough Research Published in Nature Materials',
-      excerpt: 'Laboratory research on passive film composition in corrosion-resistant alloys featured in prestigious journal.',
-      content: `Groundbreaking research from the laboratory on the effect of passive film composition on electrochemical behavior of corrosion-resistant alloys has been published in Nature Materials. The study utilized Surface Enhanced Raman Spectroscopy (SERS) to provide unprecedented insights into passive film structure and properties.
-
-      This research represents a significant advancement in understanding the fundamental mechanisms of corrosion protection in advanced alloys and has important implications for nuclear, aerospace, and marine applications.`,
-      icon: <BookOpen size={24} />
-    },
-    {
-      date: '2024-07-25',
+      date: '2017-08-01',
       category: 'Funding',
-      title: 'NSF Grant Awarded for Nuclear Facility Risk Assessment',
-      excerpt: 'Major grant from the Nuclear Regulatory Commission supports development of probability risk assessment methods for stress corrosion cracking.',
-      content: `The laboratory has been awarded a significant grant from the U.S. Nuclear Regulatory Commission to develop advanced probability risk assessment methodologies for stress corrosion cracking in nuclear facilities. This research will help improve the safety and reliability of nuclear power plant components through better understanding and prediction of environmentally assisted cracking phenomena.
-
-      The project will combine statistical analysis, mechanistic modeling, and experimental validation to create comprehensive risk assessment tools for the nuclear industry.`,
-      icon: <Award size={24} />
+      title: 'Nuclear Regulatory Commission awards UTSA $849,351 to support faculty and student development',
+      excerpt: 'The U.S. Nuclear Regulatory Commission (NRC) has awarded The University of Texas at San Antonio (UTSA) two grants totaling $849,351.',
+      content: `The U.S. Nuclear Regulatory Commission (NRC) has awarded The University of Texas at San Antonio (UTSA) two grants totaling $849,351. The funding will support the creation of new faculty development and graduate fellowship initiatives focused on nuclear safety research and education in the UTSA College of Engineering (COE).`,
+      icon: <Award size={24} />,
+      link: 'https://www.utsa.edu/today/2017/08/story/NRC-grant.html'
+    },
+    {
+      date: '2017-11-01',
+      category: 'Research',
+      title: 'New Research Project Aims to Mitigate Corrosion in Oil, Gas Equipment',
+      excerpt: 'The Southwest Research Institute (SwRI) and The University of Texas at San Antonio (UTSA) recently announced a project to research a new technique to mitigate cracking and corrosion in piping and related oil and gas industry equipment.',
+      content: `The Southwest Research Institute (SwRI) (San Antonio, Texas) and The University of Texas at San Antonio (UTSA) (San Antonio, Texas) recently announced a project to research a new technique to mitigate cracking and corrosion in piping and related oil and gas industry equipment.The project will receive $125,000 in funding through the school's Connecting through Research Partnerships (Connect) program, sponsored by the office of the vice president for research at UTSA and SwRI.`,
+      icon: <BookOpen size={24} />,
+      link: 'http://www.materialsperformance.com/news/2017/11/new-research-project-aims-to-mitigate-corrosion-in-oil-gas-equipment'
+    },
+    {
+      date: '2017-01-01',
+      category: 'Research',
+      title: 'Researchers Develop Corrosion and Traffic Solutions',
+      excerpt: 'Two new research projects: a new method for mitigating cracking and corrosion in piping used by the oil and gas sectors, and a traffic management system that can be both powered by sustainable thermal energy.',
+      content: `Two new research projects: a new method for mitigating cracking and corrosion in piping used by the oil and gas sectors, and a traffic management system that can be both powered by sustainable thermal energy and be implemented in areas with less access to traffic signage. The projects will be conducted through the Connecting through Research Partnerships (Connect) Program, with each receiving $125,000 in funding.`,
+      icon: <BookOpen size={24} />,
+      link: 'https://www.paintsquare.com/news/?fuseaction=view&id=17653'
+    },
+    {
+      date: '2017-01-01',
+      category: 'Partnership',
+      title: 'SwRI, UTSA Jointly invest in corrosion, Energy projects',
+      excerpt: 'Southwest Research Institute (SwRI) and The University of Texas at San Antonio (UTSA) announced two new research projects through the Connecting through Research Partnerships (Connect) Program.',
+      content: `Southwest Research Institute (SwRI) and The University of Texas at San Antonio (UTSA) announced two new research projects through the Connecting through Research Partnerships (Connect) Program. Each project will receive $125,000 in funding. One project will research a new technique to mitigate cracking and corrosion in piping and related equipment used by the oil and gas industry and the other will investigate the development of a traffic management system that will be powered using sustainable thermal energy.`,
+      icon: <Users size={24} />,
+      link: 'https://www.swri.org/press-release/swri-utsa-jointly-invest-corrosion-energy-projects'
+    },
+    {
+      date: '2016-08-01',
+      category: 'Award',
+      title: 'NACE International Awards $30,000 to Support Corrosion Research',
+      excerpt: 'NACE international is pleased to announce it is awarding a seed grant of $30,000 for a research project by Brendy C. Rincon Troconis of The University of Texas at San Antonio\'s (UTSA) Department of Mechanical Engineering.',
+      content: `Houston, Texas – NACE international is pleased to announce it is awarding a seed grant of $30,000 for a research project by Brendy C. Rincon Troconis of The University of Texas at San Antonio's (UTSA) Department of Mechanical Engineering. Troconis' proposal, "Effect of Passive Film Composition on the Electrochemical Behavior and Cracking of Corrosion Resistant Alloys Utilizing Surface Enhanced Raman Spectroscopy," seeks to resolve issues caused by the unique conditions of downhole applications in oil wells.`,
+      icon: <Award size={24} />,
+      link: 'https://www.nace.org/Newsroom/Press-Releases/NACE-International-Awards-$30,000-to-Support-Corrosion-Research/'
+    },
+    {
+      date: '2016-08-01',
+      category: 'Faculty',
+      title: 'New group of professors comes to UTSA from prestigious institutions',
+      excerpt: 'Brendy Rincon Troconis, assistant professor of mechanical engineering, will head UTSA\'s Corrosion Research Laboratory and brings nearly a decade of experience researching corrosion in aerospace, automobile, reinforced concrete, and oil and gas applications.',
+      content: `Brendy Rincon Troconis, assistant professor of mechanical engineering, will head UTSA's Corrosion Research Laboratory and brings nearly a decade of experience researching corrosion in aerospace, automobile, reinforced concrete, and oil and gas applications. She was thrilled to learn her department's mission perfectly aligns with her personal mission and she feels that she will be able to achieve all her goals at UTSA. In fact, she's already gotten off to a great start by receiving a $30,000 seed grant from NACE International for a research project she will conduct at UTSA.`,
+      icon: <Users size={24} />,
+      link: 'https://www.utsa.edu/today/2016/08/newfaculty.html'
     }
   ]
 
@@ -82,27 +85,6 @@ const News = () => {
       title: 'UTSA Engineering Research Symposium',
       location: 'UTSA Campus',
       description: 'Graduate students will showcase their latest research findings to the university community.'
-    }
-  ]
-
-  const recentAchievements = [
-    {
-      title: '2021 Gulf Research Program Early-Career Research Fellow',
-      recipient: 'Dr. Brendy Rincon Troconis',
-      organization: 'National Academies of Sciences, Engineering, and Medicine',
-      description: 'Selected for the Offshore Energy Safety Track'
-    },
-    {
-      title: 'Best Student Paper Award',
-      recipient: 'Meggan Wolanin',
-      organization: 'AMPP Student Conference',
-      description: 'For research on galvanic corrosion of airframe alloys'
-    },
-    {
-      title: 'Outstanding Research Assistant Award',
-      recipient: 'Luis Perdomo-Hurtado',
-      organization: 'UTSA Graduate School',
-      description: 'Recognition for excellence in hydrogen embrittlement research'
     }
   ]
 
@@ -152,6 +134,11 @@ const News = () => {
                     <p className="excerpt">{item.excerpt}</p>
                     <div className="news-content">
                       <p>{item.content}</p>
+                      {item.link && (
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="read-more-link">
+                          Read Full Article <ExternalLink size={16} />
+                        </a>
+                      )}
                     </div>
                   </article>
                 ))}
@@ -176,26 +163,6 @@ const News = () => {
                         <h4>{event.title}</h4>
                         <p className="event-location">{event.location}</p>
                         <p className="event-description">{event.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Recent Achievements */}
-              <div className="sidebar-section">
-                <h3>Recent Achievements</h3>
-                <div className="achievements-list">
-                  {recentAchievements.map((achievement, index) => (
-                    <div key={index} className="achievement-item">
-                      <div className="achievement-icon">
-                        <Award size={20} />
-                      </div>
-                      <div className="achievement-details">
-                        <h4>{achievement.title}</h4>
-                        <p className="recipient">{achievement.recipient}</p>
-                        <p className="organization">{achievement.organization}</p>
-                        <p className="description">{achievement.description}</p>
                       </div>
                     </div>
                   ))}
@@ -349,8 +316,7 @@ const News = () => {
           padding-bottom: 0.5rem;
         }
 
-        .events-list,
-        .achievements-list {
+        .events-list {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
@@ -400,50 +366,24 @@ const News = () => {
           margin: 0;
         }
 
-        .achievement-item {
-          display: flex;
-          gap: 1rem;
-          padding-bottom: 1.5rem;
-          border-bottom: 1px solid var(--border-color);
-        }
-
-        .achievement-item:last-child {
-          border-bottom: none;
-          padding-bottom: 0;
-        }
-
-        .achievement-icon {
-          color: var(--accent-color);
-          flex-shrink: 0;
-          margin-top: 0.25rem;
-        }
-
-        .achievement-details h4 {
+        .read-more-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
           color: var(--primary-color);
-          margin-bottom: 0.5rem;
-          font-size: 0.9rem;
-          line-height: 1.3;
+          text-decoration: none;
+          font-weight: 500;
+          margin-top: 1rem;
+          padding: 0.5rem 1rem;
+          border: 2px solid var(--primary-color);
+          border-radius: var(--border-radius);
+          transition: var(--transition);
         }
 
-        .recipient {
-          color: var(--accent-color);
-          font-weight: 600;
-          margin-bottom: 0.25rem;
-          font-size: 0.875rem;
-        }
-
-        .organization {
-          color: var(--text-secondary);
-          font-style: italic;
-          margin-bottom: 0.5rem;
-          font-size: 0.825rem;
-        }
-
-        .description {
-          color: var(--text-secondary);
-          font-size: 0.825rem;
-          line-height: 1.4;
-          margin: 0;
+        .read-more-link:hover {
+          background: var(--primary-color);
+          color: white;
+          transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
@@ -457,8 +397,7 @@ const News = () => {
             align-items: flex-start;
           }
 
-          .event-item,
-          .achievement-item {
+          .event-item {
             flex-direction: column;
             gap: 0.5rem;
           }
