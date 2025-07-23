@@ -131,8 +131,10 @@ const Staff = () => {
   ]
 
   const interns = [
+    { name: 'Nicole Ituarte Cedillo' },
     { name: 'Stephanie Lopez' },
     { name: 'Charles McClafferty' }
+    
   ]
 
   return (
