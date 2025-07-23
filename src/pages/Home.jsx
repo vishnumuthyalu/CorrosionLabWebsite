@@ -4,10 +4,10 @@ import '../styles/Home.css'
 
 const Home = () => {
   const stats = [
-    { icon: <Users size={32} />, value: '15+', label: 'Researchers' },
-    { icon: <BookOpen size={32} />, value: '100+', label: 'Publications' },
-    { icon: <Award size={32} />, value: '10+', label: 'Awards' },
-    { icon: <Target size={32} />, value: '5', label: 'Research Areas' }
+    { icon: <Users size={32} />, value: 'tbd', label: 'Researchers' },
+    { icon: <BookOpen size={32} />, value: 'tbd', label: 'Publications' },
+    { icon: <Award size={32} />, value: 'tbd', label: 'Awards' },
+    { icon: <Target size={32} />, value: 'tbd', label: 'Research Areas' }
   ]
 
   const researchAreas = [
@@ -156,7 +156,7 @@ const Home = () => {
             </div>
             <div className="pi-image">
               <div className="image-placeholder">
-                <img src="/api/placeholder/400/400" alt="Dr. Brendy Rincon Troconis" />
+                <img src="/professor_rincon_headshot.jpg" alt="Dr. Brendy Rincon Troconis" />
               </div>
             </div>
           </div>
@@ -167,35 +167,15 @@ const Home = () => {
       <section className="section section-alt">
         <div className="container">
           <div className="text-center mb-4">
-            <h2>Our Team & Laboratory</h2>
-            <p>Meet our dedicated researchers and explore our state-of-the-art facilities</p>
+            <h2>Our Laboratory</h2>
+            <p>Explore our state-of-the-art facilities and research equipment</p>
           </div>
-          <div className="team-gallery">
-            <div className="gallery-item">
-              <img src="/team_picture1.jpg" alt="Corrosion Lab Team" />
-              <div className="gallery-overlay">
-                <h4>Research Team</h4>
-                <p>Our dedicated team of researchers</p>
-              </div>
-            </div>
-            <div className="gallery-item">
-              <img src="/team_picture2.jpg" alt="Laboratory Collaboration" />
-              <div className="gallery-overlay">
-                <h4>Collaborative Work</h4>
-                <p>Working together on cutting-edge research</p>
-              </div>
-            </div>
-            <div className="gallery-item">
-              <img src="/equipment_1.png" alt="Laboratory Equipment" />
-              <div className="gallery-overlay">
-                <h4>Advanced Equipment</h4>
-                <p>State-of-the-art research facilities</p>
-              </div>
-            </div>
+          <div className="laboratory-image">
+            <img src="/equipment_1.png" alt="Laboratory Equipment" />
           </div>
           <div className="text-center mt-4">
-            <Link to="/staff" className="btn btn-primary">
-              Meet Our Team <ArrowRight size={20} />
+            <Link to="/resources" className="btn btn-primary">
+              Explore Our Resources <ArrowRight size={20} />
             </Link>
           </div>
         </div>

@@ -157,6 +157,15 @@ const Staff = () => {
           <div className="pi-profile">
             <div className="pi-image">
               <img src={principalInvestigator.image} alt={principalInvestigator.name} />
+              
+              <div className="expertise">
+                <h5>Research Expertise</h5>
+                <div className="specialty-tags">
+                  {principalInvestigator.expertise.map((area, index) => (
+                    <span key={index} className="specialty-tag">{area}</span>
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="pi-content">
               <h3>{principalInvestigator.name}</h3>
@@ -177,15 +186,6 @@ const Staff = () => {
                 </p>
               </div>
 
-              <div className="expertise">
-                <h5>Research Expertise</h5>
-                <div className="expertise-tags">
-                  {principalInvestigator.expertise.map((area, index) => (
-                    <span key={index} className="expertise-tag">{area}</span>
-                  ))}
-                </div>
-              </div>
-
               <div className="awards">
                 <h5><Award size={20} /> Awards & Recognition</h5>
                 <ul>
@@ -197,13 +197,13 @@ const Staff = () => {
 
               <div className="contact-links">
                 <a href={`mailto:${principalInvestigator.links.email}`} className="contact-link">
-                  <Mail size={18} /> Email
+                  <Mail size={18} /> <span>Email</span>
                 </a>
                 <a href={principalInvestigator.links.googleScholar} target="_blank" rel="noopener noreferrer" className="contact-link">
-                  <GraduationCap size={18} /> Google Scholar <ExternalLink size={14} />
+                  <GraduationCap size={18} /> <span>Google Scholar</span> <ExternalLink size={14} />
                 </a>
                 <a href={principalInvestigator.links.linkedin} target="_blank" rel="noopener noreferrer" className="contact-link">
-                  <ExternalLink size={18} /> LinkedIn <ExternalLink size={14} />
+                  <ExternalLink size={18} /> <span>LinkedIn</span> <ExternalLink size={14} />
                 </a>
               </div>
             </div>
@@ -219,11 +219,6 @@ const Staff = () => {
             <div key={index} className="scientist-profile">
               <div className="scientist-image">
                 <img src={scientist.image} alt={scientist.name} />
-              </div>
-              <div className="scientist-content">
-                <h3>{scientist.name}</h3>
-                <h4>{scientist.title}</h4>
-                <p>{scientist.bio}</p>
                 
                 <div className="specialties">
                   <h5>Research Specialties</h5>
@@ -233,6 +228,11 @@ const Staff = () => {
                     ))}
                   </div>
                 </div>
+              </div>
+              <div className="scientist-content">
+                <h3>{scientist.name}</h3>
+                <h4>{scientist.title}</h4>
+                <p>{scientist.bio}</p>
 
                 <div className="achievements">
                   <h5>Achievements</h5>

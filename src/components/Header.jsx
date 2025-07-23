@@ -71,6 +71,7 @@ const Header = () => {
           align-items: center;
           justify-content: space-between;
           padding: 1rem 0;
+          gap: 1rem;
         }
 
         .logo {
@@ -79,11 +80,16 @@ const Header = () => {
           text-decoration: none;
           color: var(--primary-color);
           font-weight: 700;
+          flex-shrink: 0;
+          min-width: 150px;
         }
 
         .logo-image {
           height: 50px;
           width: auto;
+          min-width: 150px;
+          max-width: 250px;
+          object-fit: contain;
           transition: var(--transition);
         }
 
@@ -180,6 +186,20 @@ const Header = () => {
 
           .logo-image {
             height: 40px;
+            min-width: 120px;
+            max-width: 200px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .logo-image {
+            height: 35px;
+            min-width: 100px;
+            max-width: 180px;
+          }
+          
+          .header-content {
+            padding: 0.75rem 0;
           }
         }
       `}</style>
