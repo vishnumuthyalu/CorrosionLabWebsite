@@ -275,6 +275,16 @@ p {
   overflow: hidden;
 }
 
+.research-card h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.research-card p {
+  color: white;
+  opacity: 0.95;
+}
+
 .research-card::before {
   content: '';
   position: absolute;
@@ -291,6 +301,7 @@ p {
   font-size: 3rem;
   margin-bottom: 1rem;
   opacity: 0.9;
+  color: white;
 }
 
 /* Animations */

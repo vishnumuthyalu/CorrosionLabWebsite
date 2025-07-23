@@ -70,12 +70,12 @@
 }
 
 .expertise-tag {
-  background: var(--gradient-primary);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  background: var(--background-light);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
   font-size: 0.875rem;
-  font-weight: 500;
+  border: 1px solid var(--border-color);
 }
 
 .awards ul {
@@ -96,15 +96,24 @@
 }
 
 .contact-link {
-  display: flex;
+  display: inline-flex !important;
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   background: var(--primary-color);
-  color: white;
+  color: white !important;
   text-decoration: none;
   border-radius: var(--border-radius);
   transition: var(--transition);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-link * {
+  color: white !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .contact-link:hover {

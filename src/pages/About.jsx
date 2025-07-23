@@ -55,7 +55,7 @@ const About = () => {
             <div className="main-content">
               <h2>Welcome to the UTSA Corrosion Research Laboratory</h2>
               <div className="content-image">
-                <img src="/api/placeholder/600/400" alt="Laboratory Overview" />
+                <img src="/equipment_1.png" alt="Laboratory Overview" />
               </div>
               
               <p>
@@ -98,9 +98,9 @@ const About = () => {
                 <ul>
                   <li>Founded: 2016</li>
                   <li>Department: Mechanical Engineering</li>
-                  <li>Research Areas: 5+</li>
-                  <li>Active Projects: 10+</li>
-                  <li>Graduate Students: 5</li>
+                  <li>Research Areas: tbd</li>
+                  <li>Active Projects: tbd</li>
+                  <li>Graduate Students: tbd</li>
                 </ul>
               </div>
             </div>
@@ -148,10 +148,6 @@ const About = () => {
                   </div>
                 ))}
               </div>
-            </div>
-            
-            <div className="capabilities-image">
-              <img src="/api/placeholder/500/600" alt="Laboratory Equipment" />
             </div>
           </div>
         </div>
