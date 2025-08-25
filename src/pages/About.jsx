@@ -41,8 +41,7 @@ const About = () => {
           <div className="hero-content">
             <h1>About Our Laboratory</h1>
             <p>
-              Advancing corrosion science through innovative research, 
-              cutting-edge technology, and collaborative partnerships.
+              Advancing Corrosion Science and Engineering to increase material durability, infrastructure sustainability, and safety
             </p>
           </div>
         </div>
@@ -59,25 +58,28 @@ const About = () => {
               </div>
               
               <p>
-                The UTSA Corrosion Research Laboratory is led by Prof. Brendy C. Rincon
-                Troconis in the Department of Mechanical Engineering at The University of Texas at San
-                Antonio (UTSA). Our research focuses on material degradation, specifically on
-                environmentally assisted cracking, atmospheric corrosion, corrosion in harsh
-                environments, localized corrosion, and corrosion in reinforced concrete.
+                The UTSA Corrosion Research Laboratory was founded on august 2016 by Prof. Brendy C. Rincon Troconis in the 
+                Department of Mechanical Engineering (now Department of Mechanical, Aerospace, and Industrial Engineering) 
+                at The University of Texas at San Antonio (UT San Antonio). We study how materials degrade in demanding 
+                environments to make infrastructure more sustainable and resilient. Our work spans industries such as energy, 
+                aerospace, transportation, automotive, oil and gas, and nuclear. With expertise in atmospheric, localized, galvanic, 
+                rebar, and microbiologically influenced corrosion, as well as coatings and environmentally assisted cracking, 
+                we identify and characterize degradation mechanisms, while also developing innovative solutions to control corrosion and extend 
+                the life of critical systems.
               </p>
 
               <p>
-                Our research laboratory is located in the BioScience and Engineering building
-                (BSE 0.216A) at UTSA's main campus. We welcome new project ideas, collaborators,
-                and student volunteers, so please don't hesitate to contact us.
+                Our main research laboratory is located in the BioScience and Engineering building (BSE 0.216A) at UT San Antonio's main campus. 
+                We welcome new project ideas, collaborators, and student volunteers, 
+                so please don't hesitate to contact us.
               </p>
 
               <h3>Our Mission</h3>
               <p>
-                We are dedicated to advancing the understanding of material degradation mechanisms
-                and developing innovative solutions for corrosion control across various industries.
-                Our multidisciplinary approach combines fundamental research with practical applications
-                to address real-world challenges in infrastructure sustainability and safety.
+                We are dedicated to advancing the understanding of material degradation and developing innovative solutions 
+                for corrosion control across industries. Through a multidisciplinary approach—integrating materials science, 
+                electrochemistry, chemistry, and solid mechanics—we work with collaborators to address real-world challenges in infrastructure 
+                sustainability and safety, supporting the development of safer and longer-lasting systems.
               </p>
             </div>
 
@@ -97,7 +99,7 @@ const About = () => {
                 <h3>Quick Facts</h3>
                 <ul>
                   <li>Founded: 2016</li>
-                  <li>Department: Mechanical Engineering</li>
+                  <li>Department: Mechanical, Aerospace, and Industrial Engineering</li>
                   <li>Research Areas: tbd</li>
                   <li>Active Projects: tbd</li>
                   <li>Graduate Students: tbd</li>
@@ -156,7 +158,7 @@ const About = () => {
       {/* Research Focus Areas */}
       <section className="section section-alt">
         <div className="container">
-          <h2 className="text-center mb-4">Research Focus Areas</h2>
+          <h2 className="text-center mb-4">Research Areas</h2>
           <div className="focus-areas">
             <div className="focus-area">
               <h3>Environmentally Assisted Cracking</h3>

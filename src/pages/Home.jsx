@@ -12,24 +12,54 @@ const Home = () => {
 
   const researchAreas = [
     {
-      title: 'Oil and Gas Industry',
-      description: 'Studying material degradation in harsh petroleum environments and developing corrosion control strategies.',
+      title: 'Atmospheric Corrosion',
+      description: 'tbd',
       icon: '🛢️'
     },
     {
-      title: 'Nuclear Facilities',
-      description: 'Investigating stress corrosion cracking and material behavior in nuclear environments.',
+      title: 'Rebar Corrosion',
+      description: 'tbd',
       icon: '⚛️'
     },
     {
-      title: 'Reinforced Concrete',
-      description: 'Analyzing corrosion in concrete structures and developing protective measures.',
+      title: 'Microbiologically Influenced Corrosion',
+      description: 'tbd',
       icon: '🏗️'
     },
     {
-      title: 'Stent Corrosion Fatigue',
-      description: 'Research on biomedical applications and corrosion-fatigue interactions in medical devices.',
+      title: 'Stress Corrosion Cracking',
+      description: 'tbd',
       icon: '🫀'
+    },
+    {
+      title: 'Hydrogen Embrittlement',
+      description: 'tbd',
+      icon: '🏗️'
+    },
+    {
+      title: 'Corrosion Fatigue',
+      description:'tbd',
+      icon: '🏗️'
+    },
+    {
+      title: 'Green Corrosion Inhibition',
+      description: 'tbd',
+      icon: '🏗️'
+    },
+    {
+      title: 'Coating’s Durability',
+      description: 'tbd',
+      icon: '🏗️'
+    },
+    {
+      title: 'Coating Adhesion',
+      description: 'tbd',
+      icon: '🏗️'
+    },
+    {
+      title: 'Accelerated Corrosion Testing Development',
+      description:'tbd',
+      icon: '🏗️'
     }
   ]
 
@@ -41,11 +71,7 @@ const Home = () => {
           <div className="hero-content fade-in-up">
             <h1>UTSA Corrosion Research Laboratory</h1>
             <p>
-              We are interested in studying the degradation of materials for different
-              applications including oil and gas industry, nuclear facilities, reinforced concrete,
-              stent corrosion fatigue and other forms of corrosion. Our long-term goal is to
-              identify and characterize the scientific mechanisms specific to our principal
-              areas of research.
+              Advancing Corrosion Science and Engineering to increase material durability, infrastructure sustainability, and safety
             </p>
             <div className="hero-buttons">
               <Link to="/research" className="btn btn-primary">
@@ -81,16 +107,10 @@ const Home = () => {
             <div className="about-content">
               <h2>Welcome to the UTSA Corrosion Research Laboratory</h2>
               <p>
-                The UTSA Corrosion Research Laboratory is led by Prof. Brendy C. Rincon
-                Troconis in the Department of Mechanical Engineering at The University of Texas at San
-                Antonio (UTSA). Our research focuses on material degradation, specifically on
-                environmentally assisted cracking, atmospheric corrosion, corrosion in harsh
-                environments, localized corrosion, and corrosion in reinforced concrete.
+                The UTSA Corrosion Research Laboratory was founded on august 2016 by Prof. Brendy C. Rincon Troconis in the Department of Mechanical Engineering (now Department of Mechanical, Aerospace, and Industrial Engineering) at The University of Texas at San Antonio (UT San Antonio). We study how materials degrade in demanding environments to make infrastructure more sustainable and resilient. Our work spans industries such as energy, aerospace, transportation, automotive, oil and gas, and nuclear. With expertise in atmospheric, localized, galvanic, rebar, and microbiologically influenced corrosion, as well as coatings and environmentally assisted cracking, we identify and characterize degradation mechanisms, while also developing innovative solutions to control corrosion and extend the life of critical systems.
               </p>
               <p>
-                Our research laboratory is located in the BioScience and Engineering building
-                (BSE 0.216A) at UTSA's main campus. We welcome new project ideas, collaborators,
-                and student volunteers, so please don't hesitate to contact us.
+                Our main research laboratory is located in the BioScience and Engineering building (BSE 0.216A) at UT San Antonio's main campus. We welcome new project ideas, collaborators, and student volunteers, so please don't hesitate to contact us.
               </p>
               <Link to="/about" className="btn btn-primary">
                 Learn More About Us <ArrowRight size={20} />
@@ -108,7 +128,6 @@ const Home = () => {
         <div className="container">
           <div className="text-center mb-4">
             <h2>Our Research Areas</h2>
-            <p>Exploring material degradation across diverse applications and environments</p>
           </div>
           <div className="research-grid">
             {researchAreas.map((area, index) => (
