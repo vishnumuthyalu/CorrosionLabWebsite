@@ -4,10 +4,10 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Research from './pages/Research'
-import Resources from './pages/Resources'
+import Capabilities from './pages/Capabilities'
 import Staff from './pages/Staff'
 import News from './pages/News'
-import Publications from './pages/Publications'
+import STEMOutreach from './pages/STEMOutreach'
 import Contact from './pages/Contact'
 import Achievements from './pages/Achievements'
 import './App.css'
@@ -22,10 +22,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/research" element={<Research />} />
-            <Route path="/resources" element={<Resources />} />
+            <Route path="/capabilities" element={<Capabilities />} />
             <Route path="/staff" element={<Staff />} />
             <Route path="/news" element={<News />} />
-            <Route path="/publications" element={<Publications />} />
+            <Route path="/stem-outreach" element={<STEMOutreach />} />
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

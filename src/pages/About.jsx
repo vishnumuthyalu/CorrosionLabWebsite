@@ -1,36 +1,63 @@
-import { MapPin, Target, Award, Users } from 'lucide-react'
+import { MapPin, Target, Award, Users, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useState } from 'react'
 import '../styles/About.css'
 
 const About = () => {
-  const goals = [
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % researchAreas.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + researchAreas.length) % researchAreas.length)
+  }
+
+  const researchAreas = [
     {
-      icon: <Target size={32} />,
-      title: 'Research Excellence',
-      description: 'Identify and characterize the scientific mechanisms specific to our principal areas of research'
+      title: 'Atmospheric Corrosion',
+    
     },
     {
-      icon: <Users size={32} />,
-      title: 'Collaboration',
-      description: 'Foster partnerships with industry, academia, and government agencies for impactful research'
+      title: 'Rebar Corrosion',
     },
     {
-      icon: <Award size={32} />,
-      title: 'Innovation',
-      description: 'Develop cutting-edge solutions for corrosion control and material protection'
+      title: 'Microbiologically Influenced Corrosion',
+    },
+    {
+      title: 'Stress Corrosion Cracking',
+    },
+    {
+      title: 'Hydrogen Embrittlement',
+    },
+    {
+      title: 'Corrosion Fatigue',
+    },
+    {
+      title: 'Green Corrosion Inhibition',
+    },
+    {
+      title: 'Coating’s Durability',
+    },
+    {
+      title: 'Coating Adhesion',
+    },
+    {
+      title: 'Accelerated Corrosion Testing Development',
     }
   ]
 
+ 
+
   const capabilities = [
-    'Electrochemical Testing',
-    'Mechanical Testing',
-    'Spectroscopy Analysis',
-    'Microstructural Characterization',
-    'Stress Corrosion Cracking Studies',
-    'Atmospheric Corrosion Testing',
-    'Passivation Analysis',
-    'Coating Adhesion Testing',
-    'Pitting Corrosion Research',
-    'Environmental Testing'
+    'ACCELERATED TESTING CHAMBERS',
+    'ELECTROCHEMICAL TESTING EQUIPMENT ',
+    'PHYSICO-MECHANICAL PROPERTIES OF CONCRETE/MORTAR',
+    'CORROSION MORPHOLOGY CHARACTERIZATION INSTRUMENTS',
+    'COATING PREPARATION SYSTEMS',
+    'COATING TESTING',
+    'SPECTROMETRY SYSTEMS AND ACCESSORIES',
+    'MECHANICAL LOAD FRAMES'
   ]
 
   return (
@@ -110,25 +137,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Goals Section */}
-      <section className="section section-alt">
-        <div className="container">
-          <div className="text-center mb-4">
-            <h2>Our Goals</h2>
-            <p>Driving innovation in corrosion science and engineering</p>
-          </div>
-          <div className="goals-grid">
-            {goals.map((goal, index) => (
-              <div key={index} className="goal-card">
-                <div className="goal-icon">{goal.icon}</div>
-                <h3>{goal.title}</h3>
-                <p>{goal.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Research Capabilities */}
       <section className="section">
         <div className="container">
@@ -159,37 +167,44 @@ const About = () => {
       <section className="section section-alt">
         <div className="container">
           <h2 className="text-center mb-4">Research Areas</h2>
-          <div className="focus-areas">
-            <div className="focus-area">
-              <h3>Environmentally Assisted Cracking</h3>
-              <p>
-                Investigation of stress corrosion cracking mechanisms in various environments
-                and material systems, with focus on nuclear and industrial applications.
-              </p>
+          
+          <div className="research-slideshow">
+            <div className="slideshow-container">
+              <button 
+                className="slide-btn prev-btn" 
+                onClick={prevSlide}
+                aria-label="Previous research area"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              
+              <div className="slide-content">
+                <div className="research-slide">
+                  <div className="research-card-large">
+                    <h3>{researchAreas[currentSlide].title}</h3>
+                    <p>{researchAreas[currentSlide].description}</p>
+                  </div>
+                </div>
+              </div>
+              
+              <button 
+                className="slide-btn next-btn" 
+                onClick={nextSlide}
+                aria-label="Next research area"
+              >
+                <ChevronRight size={24} />
+              </button>
             </div>
             
-            <div className="focus-area">
-              <h3>Atmospheric Corrosion</h3>
-              <p>
-                Study of material degradation in outdoor environments, including the effects
-                of climate, pollutants, and protective coatings on corrosion rates.
-              </p>
-            </div>
-            
-            <div className="focus-area">
-              <h3>Localized Corrosion</h3>
-              <p>
-                Research on pitting, crevice corrosion, and galvanic corrosion mechanisms,
-                with emphasis on predictive modeling and prevention strategies.
-              </p>
-            </div>
-            
-            <div className="focus-area">
-              <h3>Corrosion in Reinforced Concrete</h3>
-              <p>
-                Analysis of rebar corrosion in concrete structures, development of inhibitor
-                systems, and evaluation of repair and protection methods.
-              </p>
+            <div className="slide-indicators">
+              {researchAreas.map((_, index) => (
+                <button
+                  key={index}
+                  className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>

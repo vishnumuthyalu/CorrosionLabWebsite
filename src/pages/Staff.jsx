@@ -1,7 +1,74 @@
-import { ExternalLink, Mail, GraduationCap, Award } from 'lucide-react'
+import { useState } from 'react'
+import { ExternalLink, Mail, GraduationCap, Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import '../styles/Staff.css'
 
 const Staff = () => {
+  const [currentAlumniSlide, setCurrentAlumniSlide] = useState(0)
+
+  // Alumni data organized by category
+  const alumni = [
+    // Undergraduate Alumni
+    { name: 'Melanie Sanchez', degree: 'ME undergrad', period: 'Summer 2024-Spring 2025', currentPosition: 'Now Facilities Engineer at Enbridge' },
+    { name: 'Edward Irizarry-Santiago', degree: 'ME undergrad', period: 'Summer 2024', currentPosition: null },
+    { name: 'Nathaly Amaya', degree: 'CHEME undergrad', period: 'Fall 2023 – Spring 2024', currentPosition: 'Now Process Engineer I at Honeywell' },
+    { name: 'Roslyn Romero', degree: 'ME undergrad', period: 'Spring 2023 – Fall 2024', currentPosition: 'Now a MS student in the MAIE Department at UTSA' },
+    { name: 'Alyssa Garcia', degree: 'ME undergrad', period: 'Spring 2023 – Fall 2024', currentPosition: 'Now a Quality Engineering Analyst at Accenture Federal Services' },
+    { name: 'Haya Abdelaziz', degree: 'ME undergrad', period: 'Spring 2023 – Fall 2023', currentPosition: 'Now a Student Engineer at SwRI' },
+    { name: 'Sam Mcdowell-Valdez', degree: 'ME undergrad', period: 'Fall 2022', currentPosition: null },
+    { name: 'Noah Harrison', degree: 'ME undergrad', period: 'Summer, Fall 2022', currentPosition: null },
+    { name: 'Mariana Garcia', degree: 'ME undergrad', period: 'Spring, Summer, Fall 2022', currentPosition: null },
+    { name: 'Kyle Novak', degree: 'ME undergrad', period: 'Spring 2022', currentPosition: null },
+    { name: 'Aaron Morgan', degree: 'ME undergrad', period: 'Summer 2021, 1 month', currentPosition: null },
+    { name: 'Joshua Zammit', degree: 'ME undergrad', period: 'Spring 2021', currentPosition: null },
+    { name: 'Trevor Tackett', degree: 'ME undergrad', period: 'Spring 2021- Fall 2021', currentPosition: 'Now a Quality Inspection Technical at Collins Aerospace' },
+    { name: 'Charles McClafferty', degree: 'ME undergrad', period: 'Fall 2020, Spring 2021', currentPosition: null },
+    { name: 'Stephanie Lopez', degree: 'ME undergrad', period: 'Fall 2020', currentPosition: null },
+    { name: 'Sadot Martinez', degree: 'ME undergrad', period: 'Spring 2020', currentPosition: null },
+    { name: 'Sophia Nealon', degree: 'ME undergrad', period: 'Spring 2020', currentPosition: null },
+    { name: 'Theresa Enyeart', degree: 'ME undergrad', period: 'Fall 2019- Summer 2020', currentPosition: null },
+    { name: 'Javier Rodriguez', degree: 'ME undergrad', period: 'Fall 2019', currentPosition: null },
+    { name: 'Ivan Fuenmayor', degree: 'ME undergrad', period: 'Fall 2019', currentPosition: null },
+    { name: 'Victor Palos', degree: 'ME undergrad', period: 'Summer 2018, Fall 2018, Spring 2019', currentPosition: null },
+    { name: 'Anthony Abundis', degree: 'ME undergrad', period: 'Summer 2017, Fall 2017', currentPosition: 'Now working at ProAutomated as a Field Services Engineer II' },
+    { name: 'Sean Nolen', degree: 'ME undergrad', period: 'Summer 2017', currentPosition: 'Now working at Commercial Metals Company as Mechanical Reliability Specialist' },
+    { name: 'Stephanie Garcia', degree: 'ME undergrad', period: 'Summer 2017, Fall 2017, Fall 2018, Spring 2019', currentPosition: 'Now working at Johnson Controls as R&D Mechanical Engineer' },
+    { name: 'Tori Walker', degree: 'ME undergrad', period: 'Summer 2017', currentPosition: 'Now working at Midcoast Energy as Pipeline Integrity Engineer' },
+    { name: 'Kyle Fernandez', degree: 'ME undergrad', period: 'Summer 2017, Fall 2017, Spring 2018, Summer 2018', currentPosition: 'Now working at Southwest Research Institute as Engineer in the Fire Technology Department' },
+    
+    // High School Alumni
+    { name: 'Ella Reinhart', degree: 'BASIS Shavano High School', period: 'Fall 2024- Summer 2025', currentPosition: null },
+    { name: 'Diya Nair', degree: 'Keystone School', period: 'Spring 2023- Summer 2024', currentPosition: null },
+    
+    // Visiting Researchers
+    { name: 'Luis Perdomo-Hurtado', degree: 'Visiting Professor', period: 'Fall 2021', currentPosition: 'Professor at Universidad Autónoma Manizales, Colombia' },
+    { name: 'Yesica Raquel Quijada Noriega', degree: 'ChemE MS', period: 'Summer 2019', currentPosition: 'Immersion Research Program, UTSA-UNISON Summer Special Program' },
+    { name: 'Eduardo Lodato', degree: 'Chemical Engineering student', period: 'August-September 2019', currentPosition: 'Universidad Rafael Urdaneta, Venezuela' },
+    { name: 'Vinicio Ynciarte Leiva', degree: 'Visiting Researcher', period: 'August 2019 - December 2019', currentPosition: null },
+
+    // Visiting Scientists
+    {name: 'Dr. Keyvan Daneshvar',degree: 'Visiting Scienties', period: 'Since 2023', currentPosition: null }
+  ]
+
+  // Alumni slideshow navigation (showing 3 at a time)
+  const nextAlumniSlide = () => {
+    setCurrentAlumniSlide((prev) => {
+      const maxSlide = Math.ceil(alumni.length / 3) - 1
+      return (prev + 1) % (maxSlide + 1)
+    })
+  }
+
+  const prevAlumniSlide = () => {
+    setCurrentAlumniSlide((prev) => {
+      const maxSlide = Math.ceil(alumni.length / 3) - 1
+      return (prev - 1 + maxSlide + 1) % (maxSlide + 1)
+    })
+  }
+
+  // Get current set of 3 alumni to display
+  const getCurrentAlumni = () => {
+    const startIndex = currentAlumniSlide * 3
+    return alumni.slice(startIndex, startIndex + 3)
+  }
   const principalInvestigator = {
     name: 'Prof. Brendy Rincon Troconis, Ph.D.',
     title: 'Principal Investigator & Associate Professor',
@@ -65,76 +132,109 @@ const Staff = () => {
 
   const graduateResearchers = [
     {
-      name: 'Meggan Wolanin',
-      image: '/megan_wolanin_headshot.jpg',
-      degree: 'Doctoral Student',
-      research: 'Galvanic corrosion of airframe alloys under mechanical and environmental loading',
-      background: 'B.S. in Mechanical Engineering from UTSA (2020)',
-      joined: 'Fall 2020',
-      experience: 'Experience working with lathes, mills, and welding',
-      linkedin: 'https://www.linkedin.com/in/meggan-wolanin-771a1047/'
+      name: 'Bernardo Armenta',
+      image: '/bernardo_headshot.png',
+      degree: 'M.S., Mechanical Engineering',
+      dissertationTitle: 'Thesis Title: TBD. Support by DuPont',
+      dateJoined: 'March 2025',
+      linkedin: null,
+      googleScholar: null
     },
     {
-      name: 'Nayab Ali',
-      image: '/nayab_ali_headshot.jpg',
-      degree: 'Doctoral Student',
-      research: 'Metal coatings (Twin Hawk project)',
-      background: 'B.S. in Biomedical Sciences from Texas A&M (2008), Graduate certificate in Applied Statistics (2016), A.A.S. in HVAC Technology from Austin Community College (2018), B.S. in Mechanical Engineering from UTSA (2021)',
-      joined: '2022',
-      interests: 'Working in fields where corrosion science is applied to Biomedical Sciences and HVAC',
-      linkedin: 'https://www.linkedin.com/in/nayabali/'
+      name: 'Leeroy Clarke',
+      image: '',
+      degree: 'M.S., Advanced Materials Engineering', 
+      dissertationTitle: 'Dissertation Title: TBD. Support by International Motors',
+      dateJoined: 'March 2025',
+      linkedin: null,
+      googleScholar: null
     },
     {
-      name: 'Jorge Escribano',
-      image: '/jorge_escribano_headshot.png',
-      degree: 'Doctoral Student',
-      research: 'Corrosion in reinforced concrete, studying a green organic inhibitor\'s effectiveness on steel rebars through electrochemical tests and mortar specimens',
-      background: 'B.S. in Civil Engineering from UTSA',
-      specialty: 'PhD in Civil Engineering at UTSA',
-      industry: 'Industry-focused research on construction materials, specifically Magnesium Oxychloride (MOC) boards for DuPont',
-      goals: 'Aims to work in a structural firm to mitigate industry corrosion risks',
-      linkedin: 'https://www.linkedin.com/in/jorge-escribano-2349b31a5/'
+      name: 'Viancy Isaza Zapata',
+      image: '/viancy_katherine_headshot.png',
+      degree: 'Ph.D., Mechanical Engineering',
+      dissertationTitle: 'Dissertation Title: Through-Hole-Fastener Install Fatigue Stress Factors. Support by ONR',
+      dateJoined: 'August 2024',
+      linkedin: 'https://www.linkedin.com/in/viancy-catherine-isaza-zapata-8b089a26a/',
+      googleScholar: 'https://scholar.google.com/citations?user=AeyW2REAAAAJ&hl=en&oi=ao'
     },
     {
       name: 'Luis Perdomo-Hurtado',
       image: '/luis_perdamo_headshot.png',
-      degree: 'Doctoral Student',
-      research: 'Hydrogen embrittlement and hydrogen diffusion in additively manufactured alloys using advanced characterization techniques',
-      background: 'Chemical Engineer with M.Sc. in Materials Science and Engineering',
-      currentDegree: 'Ph.D. in Mechanical Engineering at UTSA',
-      specialties: 'Modeling, data analysis, corrosion health monitoring, and electrochemical methods',
-      aspirations: 'Advance corrosion engineering in energy and infrastructure applications',
+      degree: 'Ph.D., Mechanical Engineering',
+      dissertationTitle: 'Dissertation Title: Hydrogen Embrittlement of AM Alloys. Support by Gulf Research Program Fellowship',
+      dateJoined: 'January 2022',
       linkedin: 'https://www.linkedin.com/in/luis-perdomo-hurtado-4358a6210/',
       googleScholar: 'https://scholar.google.es/citations?user=r0N-Rn8AAAAJ&hl=es'
     },
     {
-      name: 'Viancy Catherine Isaza Zapata',
-      image: '/viancy_katherine_headshot.png',
-      degree: 'Doctoral Student',
-      research: 'Fatigue behavior of through-hole fastener installations in naval aircraft, developed in collaboration with The University of Texas at San Antonio and the U.S. Naval Research Laboratory',
-      background: 'Mechanical Engineer with MSc in Industrial Energy Management, specializing in materials science',
-      approach: 'Combines experimental and probabilistic approaches in accelerated corrosion-fatigue testing, electrochemical analyses, and microscopic characterization',
-      focus: 'Understanding the impact of installation variables, galvanic corrosion, and environmental factors on fatigue life',
-      modeling: 'Contributes to predictive modeling using Bayesian Networks, enhancing digital twin capabilities for aerospace maintenance',
-      linkedin: 'https://www.linkedin.com/in/viancy-catherine-isaza-zapata-8b089a26a/',
-      googleScholar: 'https://scholar.google.com/citations?user=AeyW2REAAAAJ&hl=en&oi=ao'
+      name: 'Nayab Ali',
+      image: '/nayab_ali_headshot.jpg',
+      degree: 'M.S., Mechanical Engineering',
+      dissertationTitle: 'Dissertation Title: Evaluations of Process Parameters on the Corrosion Resistance of electrodeposited coating on Carbon Steel. Support by Twin Hawks LLC.',
+      dateJoined: 'January 2022',
+      linkedin: 'https://www.linkedin.com/in/nayabali/',
+      googleScholar: null
+    },
+    {
+      name: 'Jorge Escribano',
+      image: '/jorge_escribano_headshot.png',
+      degree: 'Ph.D., Civil and Environmental Engineering',
+      dissertationTitle: 'Dissertation Title: Hybrid Corrosion Control Methods for Reinforced Concrete Elements. Support by Tran-SET',
+      dateJoined: 'August 2021',
+      linkedin: 'https://www.linkedin.com/in/jorge-escribano-2349b31a5/',
+      googleScholar: null
+    }
+    ,
+    {
+      name: 'Meggan Wolanin',
+      image: '/megan_wolanin_headshot.jpg',
+      degree: 'Ph.D., Mechanical Engineering',
+      dissertationTitle: 'Dissertation Title: Stress-Affected Corrosion Kinetics on Airframe Materials. Support by ONR',
+      dateJoined: 'August 2020',
+      linkedin: 'https://www.linkedin.com/in/meggan-wolanin-771a1047/',
+      googleScholar: null
     }
   ]
 
-  const alumni = [
-    { name: 'Tasnia Fatima', degree: 'Doctoral', linkedin: 'https://www.linkedin.com/in/tasnia-fatima-09237968/' },
-    { name: 'Drishya Dahal', degree: 'Master', linkedin: 'https://www.linkedin.com/in/drishyadahal/' },
-    { name: 'Vinicio Inciarte', degree: 'Master' },
-    { name: 'Asfia Tanjim Totini', degree: 'Master', linkedin: 'https://www.linkedin.com/in/asfia-tanjim-totini/' },
-    { name: 'Vangelina Osteguin', degree: 'Master', linkedin: 'https://www.linkedin.com/in/vangelina-osteguin/' },
-    { name: 'Loreto J. Dacio', degree: 'Master', linkedin: 'https://www.linkedin.com/in/loreto-jonathan-p-dacio-eit-b9812a13b/' }
+  const postDocStudents = [
+    // Placeholder for future post-doc students
+     {
+       name: 'Kirran Vadde',
+       image: '',
+       research: '',
+       background: '',
+       linkedin: ''
+     }
   ]
 
-  const interns = [
-    { name: 'Nicole Ituarte Cedillo' },
-    { name: 'Stephanie Lopez' },
-    { name: 'Charles McClafferty' }
-    
+  const undergraduateResearchers = [
+    // Example structure - add actual undergraduate researchers here
+    {
+       name: 'Michelle Ippolito',
+       major: 'Chemical Engineering',
+       dateJoined: 'Fall 2025'
+     },
+     {
+       name: 'Jennifer Perez',
+       major: 'Mechanical Engineering',
+       dateJoined: 'Summer 2025'
+     },
+     {
+       name: 'Jeronimo Jeronimo De Erausquin',
+       major: 'Mechanical Engineering',
+       dateJoined: 'Summer 2025'
+     },
+     {
+       name: 'Michelle Vogues',
+       major: 'Mechanical Engineering',
+       dateJoined: 'Spring 2025'
+     },
+     {
+       name: 'Nicole ituarte Cedillo',
+       major: 'Mechanical Engineering',
+       dateJoined: 'Fall 2024'
+     },
   ]
 
   return (
@@ -250,8 +350,57 @@ const Staff = () => {
         </div>
       </section>
 
-      {/* Graduate Researchers */}
+      {/* Post Doc Students */}
       <section className="section">
+        <div className="container">
+          <h2 className="section-title">Post Doc Students</h2>
+          {postDocStudents.length > 0 ? (
+            <div className="researchers-grid">
+              {postDocStudents.map((postdoc, index) => (
+                <div key={index} className="researcher-card">
+                  <div className="researcher-image">
+                    <img src={postdoc.image} alt={postdoc.name} />
+                  </div>
+                  <h4>{postdoc.name}</h4>
+                  <p className="degree">Post-Doctoral Researcher</p>
+                  
+                  <div className="research-info">
+                    <h5>Research Focus</h5>
+                    <p>{postdoc.research}</p>
+                    
+                    {postdoc.background && (
+                      <>
+                        <h5>Background</h5>
+                        <p>{postdoc.background}</p>
+                      </>
+                    )}
+                  </div>
+
+                  <div className="researcher-links">
+                    {postdoc.linkedin && (
+                      <a href={postdoc.linkedin} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                        LinkedIn <ExternalLink size={14} />
+                      </a>
+                    )}
+                    {postdoc.googleScholar && (
+                      <a href={postdoc.googleScholar} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                        Google Scholar <ExternalLink size={14} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="empty-section">
+              <p>Currently seeking qualified post-doctoral candidates to join our research team.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Graduate Researchers */}
+      <section className="section section-alt">
         <div className="container">
           <h2 className="section-title">Graduate Researchers</h2>
           <div className="researchers-grid">
@@ -263,20 +412,10 @@ const Staff = () => {
                 <h4>{researcher.name}</h4>
                 <p className="degree">{researcher.degree}</p>
                 
-                <div className="research-info">
-                  <h5>Research Focus</h5>
-                  <p>{researcher.research}</p>
-                  
-                  {researcher.background && (
-                    <>
-                      <h5>Background</h5>
-                      <p>{researcher.background}</p>
-                    </>
-                  )}
-                  
-                  {researcher.joined && (
-                    <p><strong>Joined Lab:</strong> {researcher.joined}</p>
-                  )}
+                <div className="dissertation-info">
+                  <h5>Dissertation Title</h5>
+                  <p className="dissertation-title">{researcher.dissertationTitle}</p>
+                  <p className="date-joined"><strong>Joined Lab:</strong> {researcher.dateJoined}</p>
                 </div>
 
                 <div className="researcher-links">
@@ -297,42 +436,109 @@ const Staff = () => {
         </div>
       </section>
 
-      {/* Alumni & Interns */}
-      <section className="section section-alt">
+      {/* Undergraduate Researchers */}
+      <section className="section">
         <div className="container">
-          <div className="alumni-interns-grid">
-            <div className="alumni-section">
-              <h2>Alumni</h2>
-              <div className="alumni-grid">
-                {alumni.map((person, index) => (
-                  <div key={index} className="alumni-card">
-                    <div className="alumni-avatar">
-                      {person.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <h4>{person.name}</h4>
-                    <p>{person.degree}</p>
-                    {person.linkedin && (
-                      <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="alumni-link">
+          <h2 className="section-title">Undergraduate Researchers</h2>
+          {undergraduateResearchers.length > 0 ? (
+            <div className="researchers-grid">
+              {undergraduateResearchers.map((undergrad, index) => (
+                <div key={index} className="researcher-card">
+                  <h4>{undergrad.name}</h4>
+                  <p className="degree">{undergrad.degree}</p>
+                  
+                  <div className="research-info">
+                    {undergrad.major && (
+                      <>
+                        <h5>Major</h5>
+                        <p>{undergrad.major}</p>
+                      </>
+                    )}
+                    
+                    {undergrad.research && (
+                      <>
+                        <h5>Research Project</h5>
+                        <p>{undergrad.research}</p>
+                      </>
+                    )}
+
+                    {undergrad.dateJoined && (
+                      <p className="date-joined"><strong>Joined Lab:</strong> {undergrad.dateJoined}</p>
+                    )}
+                  </div>
+
+                  <div className="researcher-links">
+                    {undergrad.linkedin && (
+                      <a href={undergrad.linkedin} target="_blank" rel="noopener noreferrer" className="researcher-link">
                         LinkedIn <ExternalLink size={14} />
                       </a>
                     )}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
+          ) : (
+            <div className="empty-section">
+              <p>We welcome motivated undergraduate students interested in corrosion research. Contact us to learn about available opportunities.</p>
+            </div>
+          )}
+        </div>
+      </section>
 
-            <div className="interns-section">
-              <h2>Current Interns</h2>
-              <div className="interns-list">
-                {interns.map((intern, index) => (
-                  <div key={index} className="intern-item">
-                    <div className="intern-avatar">
-                      {intern.name.split(' ').map(n => n[0]).join('')}
+      {/* Alumni */}
+      <section className="section section-alt">
+        <div className="container">
+          <h2 className="section-title">Alumni</h2>  
+          <div className="alumni-slideshow">
+            <div className="slideshow-container">
+              <button 
+                className="slide-btn prev-btn" 
+                onClick={prevAlumniSlide}
+                aria-label="Previous alumni"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              
+              <div className="slide-content">
+                <div className="alumni-grid-slideshow">
+                  {getCurrentAlumni().map((alumnus, index) => (
+                    <div key={index} className="alumni-card-slideshow">
+                      <div className="alumni-avatar">
+                        {alumnus.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <h4>{alumnus.name}</h4>
+                      <p className="alumni-degree">{alumnus.degree}</p>
+                      <p className="alumni-period">{alumnus.period}</p>
+                      {alumnus.currentPosition && (
+                        <p className="alumni-position">{alumnus.currentPosition}</p>
+                      )}
                     </div>
-                    <span>{intern.name}</span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+              
+              <button 
+                className="slide-btn next-btn" 
+                onClick={nextAlumniSlide}
+                aria-label="Next alumni"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+            
+            <div className="slide-indicators">
+              {Array.from({ length: Math.ceil(alumni.length / 3) }).map((_, index) => (
+                <button
+                  key={index}
+                  className={`indicator ${index === currentAlumniSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentAlumniSlide(index)}
+                  aria-label={`Go to alumni set ${index + 1}`}
+                />
+              ))}
+            </div>
+            
+            <div className="slide-counter">
+              <span>{currentAlumniSlide + 1} / {Math.ceil(alumni.length / 3)}</span>
             </div>
           </div>
         </div>

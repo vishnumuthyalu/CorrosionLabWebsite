@@ -38,7 +38,7 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul>
               <li><a href="/research">Research Projects</a></li>
-              <li><a href="/publications">Publications</a></li>
+              <li><a href="/stem-outreach">STEM Outreach</a></li>
               <li><a href="/staff">Meet Our Team</a></li>
               <li><a href="/news">Latest News</a></li>
               <li><a href="/contact">Contact Us</a></li>

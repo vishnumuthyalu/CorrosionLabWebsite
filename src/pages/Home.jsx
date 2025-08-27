@@ -1,8 +1,19 @@
-import { ArrowRight, Users, Award, BookOpen, Target } from 'lucide-react'
+import { ArrowRight, Users, Award, BookOpen, Target, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import '../styles/Home.css'
 
 const Home = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % researchAreas.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + researchAreas.length) % researchAreas.length)
+  }
+
   const stats = [
     { icon: <Users size={32} />, value: 'tbd', label: 'Researchers' },
     { icon: <BookOpen size={32} />, value: 'tbd', label: 'Publications' },
@@ -13,53 +24,34 @@ const Home = () => {
   const researchAreas = [
     {
       title: 'Atmospheric Corrosion',
-      description: 'tbd',
-      icon: '🛢️'
+    
     },
     {
       title: 'Rebar Corrosion',
-      description: 'tbd',
-      icon: '⚛️'
     },
     {
       title: 'Microbiologically Influenced Corrosion',
-      description: 'tbd',
-      icon: '🏗️'
     },
     {
       title: 'Stress Corrosion Cracking',
-      description: 'tbd',
-      icon: '🫀'
     },
     {
       title: 'Hydrogen Embrittlement',
-      description: 'tbd',
-      icon: '🏗️'
     },
     {
       title: 'Corrosion Fatigue',
-      description:'tbd',
-      icon: '🏗️'
     },
     {
       title: 'Green Corrosion Inhibition',
-      description: 'tbd',
-      icon: '🏗️'
     },
     {
       title: 'Coating’s Durability',
-      description: 'tbd',
-      icon: '🏗️'
     },
     {
       title: 'Coating Adhesion',
-      description: 'tbd',
-      icon: '🏗️'
     },
     {
       title: 'Accelerated Corrosion Testing Development',
-      description:'tbd',
-      icon: '🏗️'
     }
   ]
 
@@ -129,15 +121,48 @@ const Home = () => {
           <div className="text-center mb-4">
             <h2>Our Research Areas</h2>
           </div>
-          <div className="research-grid">
-            {researchAreas.map((area, index) => (
-              <div key={index} className="research-card">
-                <div className="research-icon">{area.icon}</div>
-                <h3>{area.title}</h3>
-                <p>{area.description}</p>
+          
+          <div className="research-slideshow">
+            <div className="slideshow-container">
+              <button 
+                className="slide-btn prev-btn" 
+                onClick={prevSlide}
+                aria-label="Previous research area"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              
+              <div className="slide-content">
+                <div className="research-slide">
+                  <div className="research-card-large">
+                    <div className="research-icon-large">{researchAreas[currentSlide].icon}</div>
+                    <h3>{researchAreas[currentSlide].title}</h3>
+                    <p>{researchAreas[currentSlide].description}</p>
+                  </div>
+                </div>
               </div>
-            ))}
+              
+              <button 
+                className="slide-btn next-btn" 
+                onClick={nextSlide}
+                aria-label="Next research area"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+            
+            <div className="slide-indicators">
+              {researchAreas.map((_, index) => (
+                <button
+                  key={index}
+                  className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
+          
           <div className="text-center mt-4">
             <Link to="/research" className="btn btn-primary">
               View All Research <ArrowRight size={20} />
@@ -193,8 +218,8 @@ const Home = () => {
             <img src="/equipment_1.png" alt="Laboratory Equipment" />
           </div>
           <div className="text-center mt-4">
-            <Link to="/resources" className="btn btn-primary">
-              Explore Our Resources <ArrowRight size={20} />
+            <Link to="/capabilities" className="btn btn-primary">
+              Explore Our Capabilities <ArrowRight size={20} />
             </Link>
           </div>
         </div>

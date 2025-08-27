@@ -227,6 +227,31 @@
   line-height: 1.5;
 }
 
+.dissertation-info {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.dissertation-info h5 {
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.dissertation-title {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+.date-joined {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0 0 0;
+}
+
 .researcher-links {
   display: flex;
   gap: 1rem;
@@ -334,6 +359,144 @@
   font-size: 0.875rem;
 }
 
+/* Empty Section Styles */
+.empty-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  border: 2px dashed var(--border-color);
+}
+
+.empty-section p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Placeholder Image Styles */
+.placeholder-image {
+  width: 150px;
+  height: 180px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.placeholder-image .initials {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Alumni Grid Update */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Alumni Slideshow Styles */
+.alumni-slideshow {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.alumni-slideshow .slideshow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.alumni-grid-slideshow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 60px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.alumni-card-slideshow {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alumni-card-slideshow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color);
+}
+
+.alumni-card-slideshow .alumni-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.alumni-card-slideshow h4 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.alumni-degree {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.alumni-period {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+
+.alumni-position {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .pi-profile,
   .scientist-profile {
@@ -352,5 +515,34 @@
 
   .contact-links {
     justify-content: center;
+  }
+
+  /* Alumni Slideshow Responsive */
+  .alumni-grid-slideshow {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+    gap: 1.5rem;
+  }
+  
+  .alumni-card-slideshow {
+    padding: 1.5rem 1rem;
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alumni-grid-slideshow {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    gap: 1rem;
+  }
+  
+  .alumni-card-slideshow {
+    padding: 1.25rem 1rem;
+    min-height: 220px;
+  }
+  
+  .alumni-card-slideshow h4 {
+    font-size: 1rem;
   }
 }

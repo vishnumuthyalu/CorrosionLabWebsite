@@ -10,10 +10,10 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Research', path: '/research' },
-    { name: 'Resources', path: '/resources' },
+    { name: 'Capabilities', path: '/capabilities' },
     { name: 'Staff', path: '/staff' },
     { name: 'News', path: '/news' },
-    { name: 'Publications', path: '/publications' },
+    { name: 'STEM Outreach', path: '/stem-outreach' },
     { name: 'Achievements', path: '/achievements' },
     { name: 'Contact', path: '/contact' }
   ]
