@@ -14,8 +14,7 @@ const Header = () => {
     { name: 'Staff', path: '/staff' },
     { name: 'News', path: '/news' },
     { name: 'STEM Outreach', path: '/stem-outreach' },
-    { name: 'Achievements', path: '/achievements' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Achievements', path: '/achievements' }
   ]
 
   const isActive = (path) => location.pathname === path

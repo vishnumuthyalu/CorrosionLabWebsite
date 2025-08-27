@@ -22,18 +22,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          <div className="footer-section">
-            <h4>Research Areas</h4>
-            <ul>
-              <li>Environmentally Assisted Cracking</li>
-              <li>Atmospheric Corrosion</li>
-              <li>Localized Corrosion</li>
-              <li>Corrosion in Reinforced Concrete</li>
-              <li>Nuclear Facility Corrosion</li>
-            </ul>
-          </div>
-
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
@@ -41,7 +29,6 @@ const Footer = () => {
               <li><a href="/stem-outreach">STEM Outreach</a></li>
               <li><a href="/staff">Meet Our Team</a></li>
               <li><a href="/news">Latest News</a></li>
-              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
 

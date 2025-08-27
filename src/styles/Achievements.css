@@ -126,6 +126,38 @@
   margin: 0 auto;
 }
 
+/* See More Button Styles */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.see-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
+}
+
+.see-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.see-more-btn:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .achievements-grid {
     grid-template-columns: 1fr;
@@ -150,5 +182,10 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+  }
+  
+  .see-more-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
   }
 }

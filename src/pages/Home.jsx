@@ -224,27 +224,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Call to Action */}
-      <section className="section cta-section">
-        <div className="container">
-          <div className="cta-content text-center">
-            <h2>Join Our Research Mission</h2>
-            <p>
-              We welcome new project ideas, collaborators, and student volunteers. 
-              Let's work together to advance corrosion science and engineering.
-            </p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
-                Get In Touch <ArrowRight size={20} />
-              </Link>
-              <Link to="/news" className="btn btn-secondary">
-                Latest News
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

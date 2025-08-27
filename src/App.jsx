@@ -8,7 +8,6 @@ import Capabilities from './pages/Capabilities'
 import Staff from './pages/Staff'
 import News from './pages/News'
 import STEMOutreach from './pages/STEMOutreach'
-import Contact from './pages/Contact'
 import Achievements from './pages/Achievements'
 import './App.css'
 
@@ -27,7 +26,6 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/stem-outreach" element={<STEMOutreach />} />
             <Route path="/achievements" element={<Achievements />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
