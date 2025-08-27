@@ -231,7 +231,7 @@ const Staff = () => {
        dateJoined: 'Spring 2025'
      },
      {
-       name: 'Nicole ituarte Cedillo',
+       name: 'Nicole Ituarte Cedillo',
        major: 'Mechanical Engineering',
        dateJoined: 'Fall 2024'
      },
