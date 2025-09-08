@@ -21,7 +21,7 @@ const events = [
     media: [
       {
         type: 'image',
-        src: '/ASM_Teacher_camp/2025/20250716_131909.jpg',
+        src: '/ASM_Teacher_camp/20250716_131909.jpg',
         alt: 'ASM Teacher Camp 2025 - Hands-on Materials Science Session'
       }
     ]
