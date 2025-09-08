@@ -44,43 +44,8 @@ const events = [
     media: [
       {
         type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2025/20250509_091652.jpg',
-        alt: 'McAndrew Elementary School Visit 2025 - Morning Setup'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2025/20250509_134736.jpg',
-        alt: 'McAndrew Elementary School Visit 2025 - Afternoon Activities'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2025/20250509_134754.jpg',
-        alt: 'McAndrew Elementary School Visit 2025 - Student Participation'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2025/20250509_134808.jpg',
-        alt: 'McAndrew Elementary School Visit 2025 - Hands-on Learning'
-      },
-      {
-        type: 'image',
         src: '/Elementary_School_Visits/McAndrew/2025/20250509_145757.jpg',
         alt: 'McAndrew Elementary School Visit 2025 - Science Fun'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2025/IMG_6245.jpeg',
-        alt: 'McAndrew Elementary School Visit 2025 - Group Photo'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2025/IMG_6247.jpeg',
-        alt: 'McAndrew Elementary School Visit 2025 - Student Projects'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2025/IMG_6252.jpeg',
-        alt: 'McAndrew Elementary School Visit 2025 - Final Activity'
       }
     ]
   },
@@ -102,33 +67,8 @@ const events = [
     media: [
       {
         type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2024/20240522_141643.jpg',
-        alt: 'McAndrew Elementary School Visit 2024 - Students Learning'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2024/20240522_141718.jpg',
-        alt: 'McAndrew Elementary School Visit 2024 - Science Demonstration'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2024/20240522_143952.jpg',
-        alt: 'McAndrew Elementary School Visit 2024 - Interactive Learning'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2024/20240522_144920.jpg',
-        alt: 'McAndrew Elementary School Visit 2024 - Hands-on Activities'
-      },
-      {
-        type: 'image',
         src: '/Elementary_School_Visits/McAndrew/2024/20240522_151710.jpg',
         alt: 'McAndrew Elementary School Visit 2024 - Science Fun'
-      },
-      {
-        type: 'image',
-        src: '/Elementary_School_Visits/McAndrew/2024/20240522_151713.jpg',
-        alt: 'McAndrew Elementary School Visit 2024 - Group Activity'
       }
     ]
   }
