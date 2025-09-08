@@ -387,6 +387,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  padding: 0 80px;
 }
 
 .slide-btn {
@@ -403,7 +404,6 @@
   color: var(--primary-color);
   position: absolute;
   z-index: 2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .slide-btn:hover {
@@ -413,11 +413,11 @@
 }
 
 .prev-btn {
-  left: -25px;
+  left: 10px;
 }
 
 .next-btn {
-  right: -25px;
+  right: 10px;
 }
 
 .slide-content {
@@ -465,44 +465,89 @@
   padding: 2rem;
 }
 
+.capability-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* For equipment with multiple images, use a side-by-side layout on larger screens */
+@media (min-width: 1024px) {
+  .capability-content-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  
+  .capability-images-section {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .capability-description-section {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .capability-description {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.capability-images-section {
+  width: 100%;
+}
+
 .capability-images {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
+  align-items: flex-start;
 }
 
-.image-container {
-  flex: 1;
-  max-width: 300px;
+.image-wrapper {
+  flex: 1 1 auto;
+  min-width: 250px;
+  max-width: 450px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: #f8f9fa;
 }
 
-.image-container:hover {
-  transform: scale(1.02);
+.image-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .capability-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
   display: block;
+  background: white;
+}
+
+.capability-description-section {
+  width: 100%;
 }
 
 .capability-description {
-  text-align: center;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .capability-description p {
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 1.1rem;
   margin: 0;
-  max-width: 700px;
-  margin: 0 auto;
+  text-align: justify;
 }
 
 .slide-indicators {
@@ -557,7 +602,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding: 0 60px;
+  padding: 0 20px;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -568,8 +613,6 @@
   border-radius: 15px;
   padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -577,8 +620,6 @@
 
 .technique-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  border-color: var(--primary-color);
 }
 
 .technique-card::before {
@@ -616,11 +657,11 @@
   }
   
   .prev-btn {
-    left: -15px;
+    left: 5px;
   }
   
   .next-btn {
-    right: -15px;
+    right: 5px;
   }
   
   .slide-btn {
@@ -640,22 +681,29 @@
     padding: 1.5rem;
   }
   
+  .capability-content-wrapper {
+    gap: 1.5rem;
+  }
+  
   .capability-images {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
   
-  .image-container {
+  .image-wrapper {
     max-width: 100%;
     width: 100%;
+    min-width: auto;
   }
   
   .capability-image {
-    height: 180px;
+    max-height: 300px;
   }
   
   .capability-description p {
     font-size: 1rem;
+    text-align: left;
   }
 }
 
@@ -665,11 +713,11 @@
   }
   
   .prev-btn {
-    left: -10px;
+    left: 2px;
   }
   
   .next-btn {
-    right: -10px;
+    right: 2px;
   }
   
   .slide-btn {
@@ -689,8 +737,20 @@
     padding: 1rem;
   }
   
+  .capability-content-wrapper {
+    gap: 1rem;
+  }
+  
+  .capability-images {
+    gap: 0.75rem;
+  }
+  
+  .image-wrapper {
+    min-width: auto;
+  }
+  
   .capability-image {
-    height: 150px;
+    max-height: 250px;
   }
   
   .capability-description p {
@@ -730,5 +790,86 @@
   .technique-content h3 {
     font-size: 0.95rem;
     min-height: 2.5rem;
+  }
+}
+
+/* Equipment CTA Section */
+.equipment-cta {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+}
+
+.equipment-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+.equipment-button:hover {
+  transform: translateY(-3px);
+  color: white;
+  text-decoration: none;
+}
+
+.equipment-button:hover svg {
+  transform: translateX(5px);
+}
+
+.equipment-button svg {
+  transition: transform 0.3s ease;
+}
+
+.equipment-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Design for Equipment CTA */
+@media (max-width: 768px) {
+  .equipment-cta {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .equipment-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .equipment-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .equipment-cta {
+    padding: 1.5rem 1rem;
+  }
+  
+  .equipment-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .equipment-description {
+    font-size: 0.95rem;
   }
 }

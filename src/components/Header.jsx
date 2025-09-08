@@ -11,7 +11,7 @@ const Header = () => {
     { name: 'About', path: '/about' },
     { name: 'Research', path: '/research' },
     { name: 'Capabilities', path: '/capabilities' },
-    { name: 'Staff', path: '/staff' },
+    { name: 'Our Team', path: '/staff' },
     { name: 'News', path: '/news' },
     { name: 'STEM Outreach', path: '/stem-outreach' },
     { name: 'Achievements', path: '/achievements' }
