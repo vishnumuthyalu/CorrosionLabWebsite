@@ -232,6 +232,7 @@ const Staff = () => {
      },
      {
        name: 'Nicole Ituarte Cedillo',
+       title: 'AMPP UTSA Student Chapter Vice President',
        major: 'Mechanical Engineering',
        dateJoined: 'Fall 2024'
      },
@@ -445,6 +446,9 @@ const Staff = () => {
               {undergraduateResearchers.map((undergrad, index) => (
                 <div key={index} className="researcher-card">
                   <h4>{undergrad.name}</h4>
+                  {undergrad.title && (
+                    <p className="title">{undergrad.title}</p>
+                  )}
                   <p className="degree">{undergrad.degree}</p>
                   
                   <div className="research-info">

@@ -205,6 +205,14 @@
   margin-bottom: 0.5rem;
 }
 
+.title {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
 .degree {
   color: var(--accent-color);
   font-weight: 600;
