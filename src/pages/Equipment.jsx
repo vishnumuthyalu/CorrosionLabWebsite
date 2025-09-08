@@ -1,47 +1,26 @@
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import '../styles/Resources.css'
+import { ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import '../styles/Equipment.css'
 
-const Capabilities = () => {
-  const [currentTechniqueSlide, setCurrentTechniqueSlide] = useState(0)
-
-  // Laboratory techniques that can be performed
-  const techniques = [
-    { title: "Slow Strain Rate Tensile (SSRT)" },
-    { title: "Accelerated Corrosion (CCT and CRH QFog and top bench AES chambers)" },
-    { title: "Four Point Bend" },
-    { title: "Constant Mechanical Load/Atmospheric Corrosion (Custom made)" },
-    { title: "Cyclic polarization/potentiodynamic polarization" },
-    { title: "Linear Polarization Resistance" },
-    { title: "Electrochemical Impedance Spectroscopy" },
-    { title: "Corrosion Morphology Characterization (developed at UTSA in collaboration with SwRI)" },
-    { title: "Pitting resistance" },
-    { title: "Multi-electrode array" },
-    { title: "Barnacle cell (hydrogen concentration determination)" },
-    { title: "Thermal Desorption Spectroscopy (hydrogen concentration, hydrogen diffusion, and hydrogen binding energy analysis)" },
-    { title: "In-situ Raman Spectroscopy" },
-    { title: "Computationally Informed Blister testing (coating adhesion)" },
-    { title: "Conventional Adhesion Testing (pull-off and peel tests)" },
-    { title: "Scanning Electrode Microscopy and Atomic Force Microscopy" },
-    { title: "Electrical Resistance" },
-    { title: "Mortar and Concrete Porosity"}
-  ]
+const Equipment = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const navigate = useNavigate()
 
   const capabilities = [
     {
       name: "CRH 1100 Q-FOG Cyclic Corrosion Tester",
       description: "Q-FOG CRH cyclic corrosion chamber can perform traditional salt spray, Prohesion, and most cyclic automotive tests. It features fully-adjustable relative humidity and precise control over ramp times. Custom-made load frames are available to perform testing under constant load.",
       images: [
-        "public/equipment_pics/crh1101.jpg", // First image path
-        "public/equipment_pics/crh1100_2.png"  // Second image path (optional)
+        "public/equipment_pics/crh1101.jpg",
+        "public/equipment_pics/crh1100_2.png"
       ]
     },
     {
       name: "Associated Environmental Chamber", 
       description: "Temperature & Humidity Environmental benchtop test chamber LHE 1.5 series",
       images: [
-        "public/equipment_pics/associated_env_chamber.png"  // Single image
+        "public/equipment_pics/associated_env_chamber.png"
       ]
     },
     {
@@ -96,7 +75,7 @@ const Capabilities = () => {
     },
     {
       name: "Olympus Microscope BX53",
-      description: "The LED illuminator for the BX53 is equivalent to or better than a 100 W halogen lamp, delivering brightness that’s appropriate for teaching or contrast methods. The BX53 microscope (Figure 9) can be customized for different observation methods, such as phase contrast and fluorescence, with modular components. A phyton algorithm was developed in collaboration with SwRI for the identification and characterization of corrosion features in images.",
+      description: "The LED illuminator for the BX53 is equivalent to or better than a 100 W halogen lamp, delivering brightness that's appropriate for teaching or contrast methods. The BX53 microscope (Figure 9) can be customized for different observation methods, such as phase contrast and fluorescence, with modular components. A phyton algorithm was developed in collaboration with SwRI for the identification and characterization of corrosion features in images.",
       images: [
         "public/equipment_pics/bx53_1.jpg",
         "public/equipment_pics/bx53_2.jpg"
@@ -137,32 +116,28 @@ const Capabilities = () => {
       images: [
         "public/equipment_pics/engraver_is400.jpg"
       ]
-    }
-    ,
+    },
     {
       name: "Thermal Desorption Spectrometer TDS 1000 SYSTEM",
       description: "This is a fully integrated surface science system tool (Figure 15) that enables the researcher to obtain quantitative information on chemical species which desorb from a sample when heated.  Typical temperature ranges are room temperature to 900C.   Mass range typically 1-200 AMU. The key element is a Thermal Desorption Spectroscopy (TDS) probe that detects the desorbing mass signal from the sample and uses a specially shielded mass spectrometer and control software to obtain high sensitivity data of mass signal versus sample temperature. ",
       images: [
         "public/equipment_pics/thermal_desort_spectrometer_tds_1000.jpg"
       ]
-    }
-    ,
+    },
     {
       name: "Raman Probe",
       description: "The RFP-540 Hellma Axiom Analytical Raman probe is a process immersion probe that has been designed to provide a high level of reliable service under a wide range of conditions. The wetted materials of the probe are: probe body - Hastelloy C-276, windows - sapphire, seal - Waspaloy and seal coating - gold. Illuminating light of 785 nm from a Tornado Hyperflux PRO plus 785 spectral system is conducted through an RFP-540 Hellma Axiom Analytical Raman probe by a 105 μm excitation fiber-optic cable. The laser beam diverged from the end of the fiber is collected and collimated by means of a 3 mm lens and directed through the bandpass filter to the input aperture of a rhomboid prism, which displaces the laser beam along the probe axis. Once the laser beam reaches the end of the probe, it is directed by the objective lens through a sapphire window onto the sample at 5mm of working distance from the outer surface of the window. The scattered Raman signal coming off from the sample is collected by the objective lens and transmitted along the probe axis to a long pass filter where it is finally collected by means of a lens and directed on a 300 μm collection fiber to the spectrometer.",
       images: [
         "public/equipment_pics/in_situ_rfp.jpg"
       ]
-    }
-    ,
+    },
     {
       name: "Micro-selective In-situ Surface Enhanced Raman Spectroscopy",
       description: "Renishaw Raman System with Microscope. A micro-capillar electrochemical cell is also available to be used with this Raman system.",
       images: [
         "public/equipment_pics/raman_system.jpg"
       ]
-    }
-    ,
+    },
     {
       name: "Mechanical Load Frames",
       description: "Electrical and servo-hydraulic frames are available for testing related to Environmentally Assisted Cracking and Mechanical Strength of mortar specimens, including 50 kN (11kip) MTS Series 370 Servo hydraulic Load Frame, Instron 5985 (250kN), and servo-hydraulic loading frame MTS 809 axial/torsion (22 kip). In addition, a DCPD system is also available for crack growth rate measurements",
@@ -181,103 +156,95 @@ const Capabilities = () => {
     setCurrentSlide((prev) => (prev - 1 + capabilities.length) % capabilities.length)
   }
 
-  // Techniques slideshow navigation (showing 3 at a time)
-  const nextTechnique = () => {
-    setCurrentTechniqueSlide((prev) => {
-      const maxSlide = Math.ceil(techniques.length / 3) - 1
-      return (prev + 1) % (maxSlide + 1)
-    })
-  }
-
-  const prevTechnique = () => {
-    setCurrentTechniqueSlide((prev) => {
-      const maxSlide = Math.ceil(techniques.length / 3) - 1
-      return (prev - 1 + maxSlide + 1) % (maxSlide + 1)
-    })
-  }
-
-  // Get current set of 3 techniques to display
-  const getCurrentTechniques = () => {
-    const startIndex = currentTechniqueSlide * 3
-    return techniques.slice(startIndex, startIndex + 3)
+  const goBack = () => {
+    navigate('/capabilities')
   }
 
   return (
-    <div className="capabilities-page">
-      {/* Hero Section */}
-      <section className="hero">
+    <div className="equipment-page">
+      {/* Header with Back Button */}
+      <section className="equipment-header">
         <div className="container">
-          <div className="hero-content">
-            <h1>Capabilities</h1>
+          <button onClick={goBack} className="back-button">
+            <ArrowLeft size={20} />
+            Back to Capabilities
+          </button>
+          <div className="equipment-hero">
+            <h1>Research Equipment</h1>
             <p>
-              State-of-the-art facilities and advanced techniques for comprehensive 
-              corrosion research and materials characterization.
+              Explore our state-of-the-art laboratory equipment and advanced instrumentation 
+              for comprehensive corrosion research and materials characterization.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Laboratory Techniques */}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title">Laboratory Techniques</h2>
-          <div className="techniques-slideshow">
-            <div className="slideshow-container">
-              <button 
-                className="slide-btn prev-btn" 
-                onClick={prevTechnique}
-                aria-label="Previous techniques"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              
-              <div className="slide-content">
-                <div className="techniques-grid">
-                  {getCurrentTechniques().map((technique, index) => (
-                    <div key={index} className="technique-card">
-                      <div className="technique-content">
-                        <h3>{technique.title}</h3>
+      {/* Equipment Slideshow */}
+      <section className="equipment-content">
+        <div className="equipment-slideshow">
+          <div className="slideshow-container">
+            <button 
+              className="slide-btn prev-btn" 
+              onClick={prevSlide}
+              aria-label="Previous equipment"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            
+            <div className="equipment-item">
+              <div className="equipment-card">
+                <div className="equipment-header">
+                  <h2>{capabilities[currentSlide].name}</h2>
+                </div>
+                
+                <div className="equipment-body">
+                  <div className="equipment-content-wrapper">
+                    <div className="equipment-images-section">
+                      <div className="equipment-images">
+                        {capabilities[currentSlide].images.map((image, imgIndex) => (
+                          <div key={imgIndex} className="image-wrapper">
+                            <img 
+                              src={image} 
+                              alt={`${capabilities[currentSlide].name} ${imgIndex + 1}`}
+                              className="equipment-image"
+                            />
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
+                    
+                    <div className="equipment-description-section">
+                      <div className="equipment-description">
+                        <p>{capabilities[currentSlide].description}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              
-              <button 
-                className="slide-btn next-btn" 
-                onClick={nextTechnique}
-                aria-label="Next techniques"
-              >
-                <ChevronRight size={24} />
-              </button>
             </div>
             
-            <div className="slide-indicators">
-              {Array.from({ length: Math.ceil(techniques.length / 3) }).map((_, index) => (
-                <button
-                  key={index}
-                  className={`indicator ${index === currentTechniqueSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentTechniqueSlide(index)}
-                  aria-label={`Go to technique set ${index + 1}`}
-                />
-              ))}
-            </div>
-            
-            <div className="slide-counter">
-              <span>{currentTechniqueSlide + 1} / {Math.ceil(techniques.length / 3)}</span>
-            </div>
+            <button 
+              className="slide-btn next-btn" 
+              onClick={nextSlide}
+              aria-label="Next equipment"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
-
-          {/* View Equipment Button */}
-          <div className="equipment-cta">
-            <Link to="/equipment" className="equipment-button">
-              <span>View Research Equipment</span>
-              <ArrowRight size={20} />
-            </Link>
-            <p className="equipment-description">
-              Explore our comprehensive collection of laboratory equipment 
-              and advanced instrumentation used for corrosion research.
-            </p>
+          
+          <div className="slide-indicators">
+            {capabilities.map((_, index) => (
+              <button
+                key={index}
+                className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                onClick={() => setCurrentSlide(index)}
+                aria-label={`Go to equipment ${index + 1}`}
+              />
+            ))}
+          </div>
+          
+          <div className="slide-counter">
+            <span>{currentSlide + 1} / {capabilities.length}</span>
           </div>
         </div>
       </section>
@@ -285,4 +252,4 @@ const Capabilities = () => {
   )
 }
 
-export default Capabilities
+export default Equipment

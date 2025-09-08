@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Research from './pages/Research'
 import Capabilities from './pages/Capabilities'
+import Equipment from './pages/Equipment'
 import Staff from './pages/Staff'
 import News from './pages/News'
 import STEMOutreach from './pages/STEMOutreach'
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/research" element={<Research />} />
             <Route path="/capabilities" element={<Capabilities />} />
+            <Route path="/equipment" element={<Equipment />} />
             <Route path="/staff" element={<Staff />} />
             <Route path="/news" element={<News />} />
             <Route path="/stem-outreach" element={<STEMOutreach />} />

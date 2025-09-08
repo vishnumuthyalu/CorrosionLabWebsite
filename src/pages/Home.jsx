@@ -15,10 +15,10 @@ const Home = () => {
   }
 
   const stats = [
-    { icon: <Users size={32} />, value: 'tbd', label: 'Researchers' },
-    { icon: <BookOpen size={32} />, value: 'tbd', label: 'Publications' },
-    { icon: <Award size={32} />, value: 'tbd', label: 'Awards' },
-    { icon: <Target size={32} />, value: 'tbd', label: 'Research Areas' }
+    { icon: <Users size={32} />, value: '13', label: 'Student Researchers' },
+    { icon: <BookOpen size={32} />, value: '16', label: 'Publications' },
+    { icon: <Award size={32} />, value: '44', label: 'Awards' },
+    { icon: <Target size={32} />, value: '10', label: 'Research Areas' }
   ]
 
   const researchAreas = [

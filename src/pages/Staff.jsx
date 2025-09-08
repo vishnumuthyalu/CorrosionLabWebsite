@@ -135,7 +135,7 @@ const Staff = () => {
       name: 'Bernardo Armenta',
       image: '/bernardo_headshot.png',
       degree: 'M.S., Mechanical Engineering',
-      dissertationTitle: 'Thesis Title: TBD. Support by DuPont',
+      dissertationTitle: 'TBD. Support by DuPont',
       dateJoined: 'March 2025',
       linkedin: null,
       googleScholar: null
@@ -144,7 +144,7 @@ const Staff = () => {
       name: 'Leeroy Clarke',
       image: '',
       degree: 'M.S., Advanced Materials Engineering', 
-      dissertationTitle: 'Dissertation Title: TBD. Support by International Motors',
+      dissertationTitle: 'TBD. Support by International Motors',
       dateJoined: 'March 2025',
       linkedin: null,
       googleScholar: null
@@ -153,7 +153,7 @@ const Staff = () => {
       name: 'Viancy Isaza Zapata',
       image: '/viancy_katherine_headshot.png',
       degree: 'Ph.D., Mechanical Engineering',
-      dissertationTitle: 'Dissertation Title: Through-Hole-Fastener Install Fatigue Stress Factors. Support by ONR',
+      dissertationTitle: 'Dissertaion Title: Through-Hole-Fastener Install Fatigue Stress Factors. Support by ONR',
       dateJoined: 'August 2024',
       linkedin: 'https://www.linkedin.com/in/viancy-catherine-isaza-zapata-8b089a26a/',
       googleScholar: 'https://scholar.google.com/citations?user=AeyW2REAAAAJ&hl=en&oi=ao'
@@ -162,7 +162,7 @@ const Staff = () => {
       name: 'Luis Perdomo-Hurtado',
       image: '/luis_perdamo_headshot.png',
       degree: 'Ph.D., Mechanical Engineering',
-      dissertationTitle: 'Dissertation Title: Hydrogen Embrittlement of AM Alloys. Support by Gulf Research Program Fellowship',
+      dissertationTitle: 'Dissertaion Title: Hydrogen Embrittlement of AM Alloys. Support by Gulf Research Program Fellowship',
       dateJoined: 'January 2022',
       linkedin: 'https://www.linkedin.com/in/luis-perdomo-hurtado-4358a6210/',
       googleScholar: 'https://scholar.google.es/citations?user=r0N-Rn8AAAAJ&hl=es'
@@ -171,7 +171,7 @@ const Staff = () => {
       name: 'Nayab Ali',
       image: '/nayab_ali_headshot.jpg',
       degree: 'M.S., Mechanical Engineering',
-      dissertationTitle: 'Dissertation Title: Evaluations of Process Parameters on the Corrosion Resistance of electrodeposited coating on Carbon Steel. Support by Twin Hawks LLC.',
+      dissertationTitle: 'Dissertaion Title: Evaluations of Process Parameters on the Corrosion Resistance of electrodeposited coating on Carbon Steel. Support by Twin Hawks LLC.',
       dateJoined: 'January 2022',
       linkedin: 'https://www.linkedin.com/in/nayabali/',
       googleScholar: null
@@ -180,7 +180,7 @@ const Staff = () => {
       name: 'Jorge Escribano',
       image: '/jorge_escribano_headshot.png',
       degree: 'Ph.D., Civil and Environmental Engineering',
-      dissertationTitle: 'Dissertation Title: Hybrid Corrosion Control Methods for Reinforced Concrete Elements. Support by Tran-SET',
+      dissertationTitle: 'Dissertaion Title: Hybrid Corrosion Control Methods for Reinforced Concrete Elements. Support by Tran-SET',
       dateJoined: 'August 2021',
       linkedin: 'https://www.linkedin.com/in/jorge-escribano-2349b31a5/',
       googleScholar: null
@@ -190,7 +190,7 @@ const Staff = () => {
       name: 'Meggan Wolanin',
       image: '/megan_wolanin_headshot.jpg',
       degree: 'Ph.D., Mechanical Engineering',
-      dissertationTitle: 'Dissertation Title: Stress-Affected Corrosion Kinetics on Airframe Materials. Support by ONR',
+      dissertationTitle: 'Dissertaion Title: Stress-Affected Corrosion Kinetics on Airframe Materials. Support by ONR',
       dateJoined: 'August 2020',
       linkedin: 'https://www.linkedin.com/in/meggan-wolanin-771a1047/',
       googleScholar: null
@@ -221,7 +221,7 @@ const Staff = () => {
        dateJoined: 'Summer 2025'
      },
      {
-       name: 'Jeronimo Jeronimo De Erausquin',
+       name: 'Jeronimo De Erausquin',
        major: 'Mechanical Engineering',
        dateJoined: 'Summer 2025'
      },
@@ -413,7 +413,7 @@ const Staff = () => {
                 <p className="degree">{researcher.degree}</p>
                 
                 <div className="dissertation-info">
-                  <h5>Dissertation Title</h5>
+                  <h5>Research Areas</h5>
                   <p className="dissertation-title">{researcher.dissertationTitle}</p>
                   <p className="date-joined"><strong>Joined Lab:</strong> {researcher.dateJoined}</p>
                 </div>
