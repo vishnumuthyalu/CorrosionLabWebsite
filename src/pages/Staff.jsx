@@ -142,7 +142,7 @@ const Staff = () => {
     },
     {
       name: 'Leeroy Clarke',
-      image: '',
+      image: '/leeroy_clarke_headshot.jpeg',
       degree: 'M.S., Advanced Materials Engineering', 
       dissertationTitle: 'TBD. Support by International Motors',
       dateJoined: 'March 2025',
@@ -201,9 +201,9 @@ const Staff = () => {
     // Placeholder for future post-doc students
      {
        name: 'Kirran Vadde',
-       image: '',
-       research: '',
-       background: '',
+       image: '/kiran_kumar_vadde_headshot.jpg',
+       research: 'Microbiologically influenced corrosion (MIC), integrating molecular microbiology, electrochemical techniques, and surface characterization to address corrosion challenges, alongside broader environmental microbiology and water quality-related studies',
+       background: 'Dr. Kiran Kumar Vadde is a Postdoctoral Research Fellow at the University of Texas at San Antonio (UTSA). He earned his Ph.D. in Biological Sciences (Environmental Microbiology) from the University of Liverpool, UK.',
        linkedin: ''
      }
   ]
