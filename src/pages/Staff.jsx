@@ -144,7 +144,7 @@ const Staff = () => {
       image: '/rojas.jpg',
       bio: `Dr. Rosangel Rojas is a Postdoctoral Visiting Professor with scholarship of MCTI-CNPq
             Brazil. She is a Civil Engineer and has a Master’s Degree in Structural Engineering
-            from the Universidad de Los Andes-ULA, Venezuela, and a Master&#39;s Degree in Project,
+            from the Universidad de Los Andes-ULA, Venezuela, and a Master's Degree in Project,
             Construction, and Maintenance of Railway Infrastructures from the Polytechnic
             University of Catalonia-UPC, Spain. She got her PhD in Civil Engineering area of
             Structures from the Universidade Federal de Rio Grande do Sul. She is currently a
