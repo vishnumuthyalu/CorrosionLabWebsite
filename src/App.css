@@ -147,7 +147,7 @@ p {
 
 /* Sections */
 .section {
-  padding: 5rem 0;
+  padding: 3rem 0;
   width: 100%;
 }
 
@@ -341,7 +341,7 @@ p {
   }
   
   .section {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   
   .card-grid {

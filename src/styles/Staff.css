@@ -2,7 +2,7 @@
 
 .section-title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: var(--primary-color);
 }
 
@@ -282,6 +282,28 @@
   font-size: 0.85rem;
   color: var(--primary-color);
   margin: 0.5rem 0 0 0;
+}
+
+.researcher-bio {
+  text-align: left;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--background-light);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.researcher-bio h5 {
+  color: var(--primary-color);
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.bio-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
 .researcher-links {
@@ -635,4 +657,116 @@
 .slide-counter span:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Graduate Researcher Slideshow Styles */
+.graduate-slideshow {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.graduate-slideshow .slideshow-container {
+  position: relative;
+  overflow: hidden;
+  padding: 0 80px;
+}
+
+.graduate-slideshow .slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.graduate-slideshow .slide-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.graduate-slideshow .prev-btn {
+  left: 10px;
+}
+
+.graduate-slideshow .next-btn {
+  right: 10px;
+}
+
+.researcher-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.researcher-slide .researcher-card {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 2rem 0;
+}
+
+.researcher-slide .researcher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments for graduate slideshow */
+@media (max-width: 768px) {
+  .graduate-slideshow {
+    padding: 0 1rem;
+  }
+  
+  .graduate-slideshow .slideshow-container {
+    padding: 0 60px;
+  }
+  
+  .graduate-slideshow .slide-btn {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .graduate-slideshow .prev-btn {
+    left: 5px;
+  }
+  
+  .graduate-slideshow .next-btn {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .graduate-slideshow .slideshow-container {
+    padding: 0 50px;
+  }
+  
+  .graduate-slideshow .slide-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .graduate-slideshow .prev-btn {
+    left: 0;
+  }
+  
+  .graduate-slideshow .next-btn {
+    right: 0;
+  }
 }

@@ -4,6 +4,7 @@ import '../styles/Staff.css'
 
 const Staff = () => {
   const [currentAlumniSlide, setCurrentAlumniSlide] = useState(0)
+  const [currentGradSlide, setCurrentGradSlide] = useState(0)
 
   // Alumni data organized by category
   const alumni = [
@@ -69,6 +70,16 @@ const Staff = () => {
     const startIndex = currentAlumniSlide * 3
     return alumni.slice(startIndex, startIndex + 3)
   }
+
+  // Graduate researcher slideshow navigation
+  const nextGradSlide = () => {
+    setCurrentGradSlide((prev) => (prev + 1) % graduateResearchers.length)
+  }
+
+  const prevGradSlide = () => {
+    setCurrentGradSlide((prev) => (prev - 1 + graduateResearchers.length) % graduateResearchers.length)
+  }
+
   const principalInvestigator = {
     name: 'Prof. Brendy Rincon Troconis, Ph.D.',
     title: 'Principal Investigator & Associate Professor',
@@ -127,6 +138,32 @@ const Staff = () => {
         'CP Specialist (No. 8516) from NACE International',
         'Education Director of ALCONPAT International'
       ]
+    },{
+      name: 'Rosangel Rojas, Ph.D',
+      title: 'Research Scientist at UTSA',
+      image: '/rojas.jpg',
+      bio: `Dr. Rosangel Rojas is a Postdoctoral Visiting Professor with scholarship of MCTI-CNPq
+            Brazil. She is a Civil Engineer and has a Master’s Degree in Structural Engineering
+            from the Universidad de Los Andes-ULA, Venezuela, and a Master&#39;s Degree in Project,
+            Construction, and Maintenance of Railway Infrastructures from the Polytechnic
+            University of Catalonia-UPC, Spain. She got her PhD in Civil Engineering area of
+            Structures from the Universidade Federal de Rio Grande do Sul. She is currently a
+            professor in the Universidade Federal de Rio Grande FURG, Brazil. She has been
+            coordinator of FAPERGS research projects in Brazil. She was a professor at the
+            Universidad Central de Venezuela-UCV and a Research in the Fundación Venezolana
+            de Investigaciones Sismológicas-FUNVISIS.`,
+      specialties: [
+        'Ultra-high-performance concrete-UHPFRC',
+        'Fiber Reinforced Concrete-FRC',
+        'Modeling and numeric simulation of structures',
+        'Structural Vulnerability',
+        'Earthquake engineering problems'
+      ],
+      achievements: [
+        'OAS Scholarship',
+        'CAPES Scholarship',
+        'CNPq Scholarship',
+      ]
     }
   ]
 
@@ -137,6 +174,7 @@ const Staff = () => {
       degree: 'M.S., Mechanical Engineering',
       dissertationTitle: 'TBD. Support by DuPont',
       dateJoined: 'March 2025',
+      bio: 'Bernardo Armenta is a Mechanical Engineering master’s student, having earned his B.S. in Mechanical Engineering from UTSA. His current research in the Corrosion Lab focuses on the investigation of Magnesium Oxychloride (MOC) boards, evaluating their performance and durability in construction applications. With a strong background in fluid mechanics, Bernardo is interested in applying his mechanical engineering expertise to the piping industry, aiming to improve system reliability and prevent corrosion-related failures.',
       linkedin: null,
       googleScholar: null
     },
@@ -146,6 +184,7 @@ const Staff = () => {
       degree: 'M.S., Advanced Materials Engineering', 
       dissertationTitle: 'TBD. Support by International Motors',
       dateJoined: 'March 2025',
+      bio: 'Leeroy Clarke is a Graduate Student in Materials Engineering at the University of Texas at San Antonio (UTSA). He earned his B.S. in Chemical Engineering from Texas A&amp;M University Kingsville. He has over four years of experience in the automotive industry, where he works in the Materials Engineering department specializing in paint systems, protective coatings, and corrosion mitigation strategies for heavy-duty vehicles. His graduate research focuses on atmospheric corrosion mechanisms, with particular emphasis on the influence of road salts such as MgCl₂. His work seeks to improve the understanding of corrosion processes in the transportation sector and contribute to the development of more robust test methods and protective solutions.',
       linkedin: null,
       googleScholar: null
     },
@@ -155,6 +194,7 @@ const Staff = () => {
       degree: 'Ph.D., Mechanical Engineering',
       dissertationTitle: 'Through-Hole-Fastener Install Fatigue Stress Factors. Support by ONR',
       dateJoined: 'August 2024',
+      bio: '',
       linkedin: 'https://www.linkedin.com/in/viancy-catherine-isaza-zapata-8b089a26a/',
       googleScholar: 'https://scholar.google.com/citations?user=AeyW2REAAAAJ&hl=en&oi=ao'
     },
@@ -164,6 +204,7 @@ const Staff = () => {
       degree: 'Ph.D., Mechanical Engineering',
       dissertationTitle: 'Hydrogen Embrittlement of AM Alloys. Support by Gulf Research Program Fellowship',
       dateJoined: 'January 2022',
+      bio: '',
       linkedin: 'https://www.linkedin.com/in/luis-perdomo-hurtado-4358a6210/',
       googleScholar: 'https://scholar.google.es/citations?user=r0N-Rn8AAAAJ&hl=es'
     },
@@ -173,6 +214,7 @@ const Staff = () => {
       degree: 'M.S., Mechanical Engineering',
       dissertationTitle: 'Evaluations of Process Parameters on the Corrosion Resistance of electrodeposited coating on Carbon Steel. Support by Twin Hawks LLC.',
       dateJoined: 'January 2022',
+      bio: 'Nayab Ali began her academic career at Texas A&M University where she received her Bachelor of Science degree in Biomedical Sciences in Fall 2008. After completing her Bachelor’s degree she went on to pursue a graduate certificate in Applied Statistics from Texas A&M University in 2016, an Associate of Applied Science in Heating, Heating, Air Conditioning, and Refrigeration Technology from Austin Community College in 2018, and a second Bachelor of Science degree in Mechanical Engineering from The University of Texas at San Antonio in Fall 2021. The following semester she joined the UTSA Corrosion Lab and is now pursuing her Ph.D. in Mechanical Engineering with a concentration in Mechanics and Materials. Her current work involves the Twin Hawk project on metal coatings. Her interests are in applying corrosion to in the fields of Biomedical Sciences and HVAC.',
       linkedin: 'https://www.linkedin.com/in/nayabali/',
       googleScholar: null
     },
@@ -182,6 +224,7 @@ const Staff = () => {
       degree: 'Ph.D., Civil and Environmental Engineering',
       dissertationTitle: 'Hybrid Corrosion Control Methods for Reinforced Concrete Elements. Support by Tran-SET',
       dateJoined: 'August 2021',
+      bio: 'Jorge Escribano is a Mexican foreign student pursuing a PhD in Civil Engineering at the University of Texas at San Antonio, where he previously received a Bachelor of Science in Civil Engineering. His current research focuses on corrosion in reinforced concrete, particularly the effectiveness of a green organic inhibitor in different types of steel rebar. His study involves conducting aqueous electrochemical experiments on steel rebars and analyzing the corrosion behavior of specimens of reinforced mortar under the same conditions. Jorge is enthusiastic in remaining in academia, becoming a professor, and enhancing the quality of education in his field of study. Still, he anticipates working in a structural firm to minimize the industry’s corrosion risks.',
       linkedin: 'https://www.linkedin.com/in/jorge-escribano-2349b31a5/',
       googleScholar: null
     }
@@ -192,6 +235,7 @@ const Staff = () => {
       degree: 'Ph.D., Mechanical Engineering',
       dissertationTitle: 'Stress-Affected Corrosion Kinetics on Airframe Materials. Support by ONR',
       dateJoined: 'August 2020',
+      bio: 'Meggan Wolanin received her bachelor’s degree in Mechanical Engineering from UTSA in May 2020. She is currently pursuing her PhD in the same field. She joined the Corrosion lab in Fall 2020. Her current research focuses on galvanic corrosion of airframe alloys under mechanical and environmental loading. She also has experience working with lathes, mills, and welding.',
       linkedin: 'https://www.linkedin.com/in/meggan-wolanin-771a1047/',
       googleScholar: null
     }
@@ -404,35 +448,64 @@ const Staff = () => {
       <section className="section section-alt">
         <div className="container">
           <h2 className="section-title">Graduate Researchers</h2>
-          <div className="researchers-grid">
-            {graduateResearchers.map((researcher, index) => (
-              <div key={index} className="researcher-card">
-                <div className="researcher-image">
-                  <img src={researcher.image} alt={researcher.name} />
-                </div>
-                <h4>{researcher.name}</h4>
-                <p className="degree">{researcher.degree}</p>
-                
-                <div className="dissertation-info">
-                  <h5>Research Areas</h5>
-                  <p className="dissertation-title">{researcher.dissertationTitle}</p>
-                  <p className="date-joined"><strong>Joined Lab:</strong> {researcher.dateJoined}</p>
-                </div>
+          <div className="graduate-slideshow">
+            <div className="slideshow-container">
+              <button 
+                className="slide-btn prev-btn" 
+                onClick={prevGradSlide}
+                aria-label="Previous graduate researcher"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              
+              <div className="researcher-slide">
+                <div className="researcher-card">
+                  <div className="researcher-image">
+                    <img src={graduateResearchers[currentGradSlide].image} alt={graduateResearchers[currentGradSlide].name} />
+                  </div>
+                  <h4>{graduateResearchers[currentGradSlide].name}</h4>
+                  <p className="degree">{graduateResearchers[currentGradSlide].degree}</p>
+                  
+                  <div className="dissertation-info">
+                    <h5>Research Areas</h5>
+                    <p className="dissertation-title">{graduateResearchers[currentGradSlide].dissertationTitle}</p>
+                    <p className="date-joined"><strong>Joined Lab:</strong> {graduateResearchers[currentGradSlide].dateJoined}</p>
+                  </div>
 
-                <div className="researcher-links">
-                  {researcher.linkedin && (
-                    <a href={researcher.linkedin} target="_blank" rel="noopener noreferrer" className="researcher-link">
-                      LinkedIn <ExternalLink size={14} />
-                    </a>
+                  {graduateResearchers[currentGradSlide].bio && (
+                    <div className="researcher-bio">
+                      <h5>Biography</h5>
+                      <p className="bio-text">{graduateResearchers[currentGradSlide].bio}</p>
+                    </div>
                   )}
-                  {researcher.googleScholar && (
-                    <a href={researcher.googleScholar} target="_blank" rel="noopener noreferrer" className="researcher-link">
-                      Google Scholar <ExternalLink size={14} />
-                    </a>
-                  )}
+
+                  <div className="researcher-links">
+                    {graduateResearchers[currentGradSlide].linkedin && (
+                      <a href={graduateResearchers[currentGradSlide].linkedin} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                        LinkedIn <ExternalLink size={14} />
+                      </a>
+                    )}
+                    {graduateResearchers[currentGradSlide].googleScholar && (
+                      <a href={graduateResearchers[currentGradSlide].googleScholar} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                        Google Scholar <ExternalLink size={14} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            ))}
+              
+              <button 
+                className="slide-btn next-btn" 
+                onClick={nextGradSlide}
+                aria-label="Next graduate researcher"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+            
+            <div className="slide-counter">
+              <span>{currentGradSlide + 1} / {graduateResearchers.length}</span>
+            </div>
           </div>
         </div>
       </section>
