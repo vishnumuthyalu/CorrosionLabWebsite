@@ -232,17 +232,6 @@ const Equipment = () => {
             </button>
           </div>
           
-          <div className="slide-indicators">
-            {capabilities.map((_, index) => (
-              <button
-                key={index}
-                className={`indicator ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(index)}
-                aria-label={`Go to equipment ${index + 1}`}
-              />
-            ))}
-          </div>
-          
           <div className="slide-counter">
             <span>{currentSlide + 1} / {capabilities.length}</span>
           </div>

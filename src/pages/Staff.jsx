@@ -9,7 +9,7 @@ const Staff = () => {
   const alumni = [
     // Undergraduate Alumni
     { name: 'Melanie Sanchez', degree: 'ME undergrad', period: 'Summer 2024-Spring 2025', currentPosition: 'Now Facilities Engineer at Enbridge' },
-    { name: 'Edward Irizarry-Santiago', degree: 'ME undergrad', period: 'Summer 2024', currentPosition: null },
+    { name: 'Edward Irizarry-Santi', degree: 'ME undergrad', period: 'Summer 2024', currentPosition: null },
     { name: 'Nathaly Amaya', degree: 'CHEME undergrad', period: 'Fall 2023 – Spring 2024', currentPosition: 'Now Process Engineer I at Honeywell' },
     { name: 'Roslyn Romero', degree: 'ME undergrad', period: 'Spring 2023 – Fall 2024', currentPosition: 'Now a MS student in the MAIE Department at UTSA' },
     { name: 'Alyssa Garcia', degree: 'ME undergrad', period: 'Spring 2023 – Fall 2024', currentPosition: 'Now a Quality Engineering Analyst at Accenture Federal Services' },
@@ -354,7 +354,7 @@ const Staff = () => {
       {/* Post Doc Students */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">Post Doc Students</h2>
+          <h2 className="section-title">Post-Doctoral Researchers</h2>
           {postDocStudents.length > 0 ? (
             <div className="researchers-grid">
               {postDocStudents.map((postdoc, index) => (
@@ -528,17 +528,6 @@ const Staff = () => {
               >
                 <ChevronRight size={24} />
               </button>
-            </div>
-            
-            <div className="slide-indicators">
-              {Array.from({ length: Math.ceil(alumni.length / 3) }).map((_, index) => (
-                <button
-                  key={index}
-                  className={`indicator ${index === currentAlumniSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentAlumniSlide(index)}
-                  aria-label={`Go to alumni set ${index + 1}`}
-                />
-              ))}
             </div>
             
             <div className="slide-counter">

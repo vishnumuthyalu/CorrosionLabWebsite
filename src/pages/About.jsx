@@ -196,15 +196,8 @@ const About = () => {
               </button>
             </div>
             
-            <div className="slide-indicators">
-              {researchAreas.map((_, index) => (
-                <button
-                  key={index}
-                  className={`indicator ${index === currentSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+            <div className="slide-counter">
+              <span>{currentSlide + 1} / {researchAreas.length}</span>
             </div>
           </div>
         </div>

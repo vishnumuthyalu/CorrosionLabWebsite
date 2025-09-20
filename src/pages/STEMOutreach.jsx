@@ -126,9 +126,9 @@ const EventSection = ({ event, isAlternate, slideIndex, onNextSlide, onPrevSlide
                     >
                       <ChevronLeft size={20} />
                     </button>
-                    <span className="slide-counter">
-                      {slideIndex + 1} / {event.media.length}
-                    </span>
+                    <div className="slide-counter">
+                      <span>{slideIndex + 1} / {event.media.length}</span>
+                    </div>
                     <button 
                       onClick={() => onNextSlide(event.id)}
                       className="nav-button"

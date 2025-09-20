@@ -132,9 +132,18 @@
   margin-bottom: 2rem;
 }
 
+.scientist-image {
+  text-align: center;
+}
+
 .scientist-image img {
   width: 100%;
+  max-width: 220px;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 20%;
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
 }
 
 .scientist-content h3 {
@@ -198,6 +207,21 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 auto 1rem;
+}
+
+.researcher-image {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.researcher-image img {
+  width: 100%;
+  max-width: 180px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
 }
 
 .researcher-card h4 {
@@ -512,6 +536,21 @@
     text-align: center;
   }
 
+  .pi-image img {
+    max-width: 240px;
+    height: 280px;
+  }
+
+  .scientist-image img {
+    max-width: 200px;
+    height: 250px;
+  }
+
+  .researcher-image img {
+    max-width: 160px;
+    height: 200px;
+  }
+
   .alumni-interns-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -539,6 +578,21 @@
 }
 
 @media (max-width: 480px) {
+  .pi-image img {
+    max-width: 200px;
+    height: 240px;
+  }
+
+  .scientist-image img {
+    max-width: 180px;
+    height: 220px;
+  }
+
+  .researcher-image img {
+    max-width: 140px;
+    height: 180px;
+  }
+
   .alumni-grid-slideshow {
     grid-template-columns: 1fr;
     padding: 0 10px;
@@ -553,4 +607,32 @@
   .alumni-card-slideshow h4 {
     font-size: 1rem;
   }
+}
+
+/* Slide Counter Styles */
+.slide-counter {
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-counter span {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  min-width: 80px;
+  text-align: center;
+}
+
+.slide-counter span:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }

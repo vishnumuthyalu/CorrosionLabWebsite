@@ -1,43 +1,92 @@
-/* Publications Page Styles */
+/* Publications Page Styles - Updated Professional Counter Design */
 
 /* Publications Counter */
 .publications-counter {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
 }
 
 .counter-card {
-  background: white;
-  padding: 3rem 4rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-medium);
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 4rem 5rem;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   text-align: center;
-  transition: var(--transition);
-  border-top: 4px solid var(--primary-color);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+}
+
+.counter-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.counter-card:hover::before {
+  transform: scaleX(1);
 }
 
 .counter-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-large);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
 }
 
 .counter-icon {
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #f0f8ff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.counter-card:hover .counter-icon {
+  background: #e3f2fd;
+  transform: scale(1.1) rotate(5deg);
 }
 
 .counter-value {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 900;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1;
+  position: relative;
 }
 
 .counter-label {
   color: var(--text-secondary);
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.counter-card:hover .counter-label {
+  color: var(--primary-color);
 }
 
 /* Publications List */
@@ -115,11 +164,23 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .counter-card {
-    padding: 2rem 3rem;
+    padding: 3rem 3.5rem;
+    max-width: 350px;
+  }
+
+  .counter-icon {
+    width: 80px;
+    height: 80px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
   }
   
   .counter-value {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+  }
+
+  .counter-label {
+    font-size: 1.1rem;
   }
   
   .publication-card {
@@ -137,11 +198,24 @@
 
 @media (max-width: 480px) {
   .counter-card {
-    padding: 1.5rem 2rem;
+    padding: 2.5rem 2rem;
+    max-width: 300px;
+  }
+
+  .counter-icon {
+    width: 70px;
+    height: 70px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
   }
   
   .counter-value {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .counter-label {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
   }
   
   .publication-card {

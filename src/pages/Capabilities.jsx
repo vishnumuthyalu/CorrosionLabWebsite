@@ -252,17 +252,6 @@ const Capabilities = () => {
               </button>
             </div>
             
-            <div className="slide-indicators">
-              {Array.from({ length: Math.ceil(techniques.length / 3) }).map((_, index) => (
-                <button
-                  key={index}
-                  className={`indicator ${index === currentTechniqueSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentTechniqueSlide(index)}
-                  aria-label={`Go to technique set ${index + 1}`}
-                />
-              ))}
-            </div>
-            
             <div className="slide-counter">
               <span>{currentTechniqueSlide + 1} / {Math.ceil(techniques.length / 3)}</span>
             </div>

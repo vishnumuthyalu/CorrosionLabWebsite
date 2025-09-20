@@ -12,6 +12,7 @@ html {
 
 :root {
   --primary-color: #003f5c;
+  --primary-color-rgb: 0, 63, 92;
   --secondary-color: #2f4b7c;
   --accent-color: #665191;
   --highlight-color: #a05195;

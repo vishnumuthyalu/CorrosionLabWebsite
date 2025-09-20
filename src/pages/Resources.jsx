@@ -171,19 +171,8 @@ const Resources = () => {
               </button>
             </div>
             
-            <div className="slider-dots">
-              {equipmentList.map((_, index) => (
-                <button
-                  key={index}
-                  className={`dot ${index === currentSlide ? 'active' : ''}`}
-                  onClick={() => goToSlide(index)}
-                  aria-label={`Go to equipment ${index + 1}`}
-                />
-              ))}
-            </div>
-            
-            <div className="slider-counter">
-              {currentSlide + 1} of {equipmentList.length}
+            <div className="slide-counter">
+              <span>{currentSlide + 1} / {equipmentList.length}</span>
             </div>
           </div>
         </div>
