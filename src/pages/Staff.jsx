@@ -248,7 +248,8 @@ const Staff = () => {
        image: '/kiran_kumar_vadde_headshot.jpg',
        research: 'Microbiologically influenced corrosion (MIC), integrating molecular microbiology, electrochemical techniques, and surface characterization to address corrosion challenges, alongside broader environmental microbiology and water quality-related studies',
        background: 'Dr. Kiran Kumar Vadde is a Postdoctoral Research Fellow at the University of Texas at San Antonio (UTSA). He earned his Ph.D. in Biological Sciences (Environmental Microbiology) from the University of Liverpool, UK.',
-       linkedin: ''
+       linkedin: 'https://www.linkedin.com/in/dr-kiran-kumar-vadde-a85b687a/',
+       googleScholar: 'https://scholar.google.com/citations?user=14OpF6MAAAAJ&hl=en'
      }
   ]
 
