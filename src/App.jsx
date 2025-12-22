@@ -10,6 +10,7 @@ import Staff from './pages/Staff'
 import News from './pages/News'
 import STEMOutreach from './pages/STEMOutreach'
 import Achievements from './pages/Achievements'
+import Scholarship from './pages/Scholarship'
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/stem-outreach" element={<STEMOutreach />} />
             <Route path="/achievements" element={<Achievements />} />
+            <Route path="/scholarship" element={<Scholarship />} />
           </Routes>
         </main>
         <Footer />

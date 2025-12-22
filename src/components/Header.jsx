@@ -14,7 +14,8 @@ const Header = () => {
     { name: 'Our Team', path: '/staff' },
     { name: 'News', path: '/news' },
     { name: 'STEM Outreach', path: '/stem-outreach' },
-    { name: 'Achievements', path: '/achievements' }
+    { name: 'Achievements', path: '/achievements' },
+    { name: 'Scholarship', path: '/scholarship' }
   ]
 
   const isActive = (path) => location.pathname === path
@@ -63,14 +64,21 @@ const Header = () => {
           top: 0;
           z-index: 1000;
           transition: var(--transition);
+          width: 100%;
+        }
+
+        .header .container {
+          max-width: 100%;
+          padding: 0 2rem;
         }
 
         .header-content {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
           padding: 1rem 0;
-          gap: 1rem;
+          gap: 2rem;
+          width: 100%;
         }
 
         .logo {
@@ -114,8 +122,9 @@ const Header = () => {
 
         .nav {
           display: flex;
-          gap: 2rem;
+          gap: 3rem;
           align-items: center;
+          flex: 1;
         }
 
         .nav-link {
@@ -125,6 +134,7 @@ const Header = () => {
           padding: 0.5rem 0;
           position: relative;
           transition: var(--transition);
+          white-space: nowrap;
         }
 
         .nav-link::after {

@@ -68,11 +68,24 @@ const Footer = () => {
           margin-top: auto;
         }
 
+        .footer * {
+          background: transparent !important;
+        }
+
+        .footer .container {
+          background: transparent !important;
+        }
+
         .footer-content {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 2rem;
           margin-bottom: 2rem;
+          background: transparent !important;
+        }
+
+        .footer-section {
+          background: transparent !important;
         }
 
         .footer-section h3 {
@@ -94,6 +107,7 @@ const Footer = () => {
 
         .contact-info {
           margin-top: 1.5rem;
+          background: transparent;
         }
 
         .contact-item {
@@ -102,6 +116,7 @@ const Footer = () => {
           gap: 0.75rem;
           margin-bottom: 1rem;
           color: rgba(255, 255, 255, 0.8);
+          background: transparent;
         }
 
         .footer-section ul {
