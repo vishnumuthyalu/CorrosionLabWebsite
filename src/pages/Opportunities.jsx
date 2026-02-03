@@ -1,7 +1,7 @@
 import { Calendar, DollarSign, Award, FileText, Mail } from 'lucide-react'
-import '../styles/Oppurtunities.css'
+import '../styles/Opportunities.css'
 
-const Oppurtunities = () => {
+const Opportunities = () => {
   const criteria = [
     {
       title: 'Fresh ME Graduate',
@@ -154,7 +154,7 @@ const Oppurtunities = () => {
                   brendy.rincon@utsa.edu
                 </a>
                 <p className="submission-note">
-                  <strong>Subject Line:</strong> Competitive Scholarship Application - [Your Name]
+                  <strong>Subject Line:</strong> Research Application - [Your Name]
                 </p>
               </div>
             </div>
@@ -202,4 +202,4 @@ const Oppurtunities = () => {
   )
 }
 
-export default Oppurtunities
+export default Opportunities
