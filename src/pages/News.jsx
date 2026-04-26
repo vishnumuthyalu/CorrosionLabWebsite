@@ -24,19 +24,15 @@ const News = () => {
       date: '2026-03-16',
       title: 'Outstanding Success at AMPP 2026 Conference & Expo',
       excerpt: 'Our research group presented 12 presentations and won three first-place awards at the 2026 AMPP Conference in San Antonio, Texas.',
-      content: `We had an incredible experience at the 2026 AMPP: Association for Materials Protection and Performance Conference & Expo! Our research group was proud to contribute 12 presentations in total (6 podium and 6 poster) on various topics.
-
-A special congratulations to our award winners:
-
-• Nayab A. Ali earned 1st place in the Harvey Herro-Appleman – Applied Materials Protection Technology Category for the poster: "Surface Preparation Effects on the Morphology and Corrosion Resistance of Electrodeposited Zn–Si Coatings on Steel."
-
-• Jorge Escribano received 1st place in the Marcel Pourbaix – Corrosion Science Category for the poster: "Significance of Accelerated Electrochemical Methods for Evaluating MOC Boards."
-
-• David Silva, in his first conference and poster competition, won 1st place in the David Shifler – Undergraduate Category for the poster: "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds." Congratulations as well to Meggan Wolanin and Juan Elizarraras who are also part of this project and heavily contributed to this poster! Meggan assisted in training and guiding the undergraduate students.
-
-These achievements reflect the dedication, hard work, and commitment of our students. It was rewarding to see them accomplish their goals!
-
-We sincerely thank the UTSA Graduate School, the UTSA Department of Mechanical, Aerospace, and Industrial Engineering, Twin Hawks, DuPont, and Naval Air Warfare Center Aircraft Division (NAWCAD), especially Steven Kopitzke (NAWCAD mentor), for their generous support in mentorship and/or funding our research and enabling student travel to the conference.`,
+      content: `We had an incredible experience at the 2026 AMPP: Association for Materials Protection and Performance Conference & Expo! Our research group was proud to contribute 12 presentations in total (6 podium and 6 poster) on various topics. 
+      
+      A special congratulations to our award winners:
+      
+      1- Nayab A. Ali earned 1st place in the Harvey Herro-Appleman – Applied Materials Protection Technology Category for the poster: "Surface Preparation Effects on the Morphology and Corrosion Resistance of Electrodeposited Zn–Si Coatings on Steel."
+      2- Jorge Escribano received 1st place in the Marcel Pourbaix – Corrosion Science Category for the poster: "Significance of Accelerated Electrochemical Methods for Evaluating MOC Boards."
+      3- David Silva, in his first conference and poster competition, won 1st place in the David Shifler – Undergraduate Category for the poster: "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds." Congratulations as well to Meggan Wolanin and Juan Elizarraras who are also part of this project and heavily contributed to this poster! Meggan assisted in training and guiding the undergraduate students.
+      
+      These achievements reflect the dedication, hard work, and commitment of our students. It was rewarding to see them accomplish their goals! We sincerely thank the UTSA Graduate School, the UTSA Department of Mechanical, Aerospace, and Industrial Engineering, Twin Hawks, DuPont, and Naval Air Warfare Center Aircraft Division (NAWCAD), especially Steven Kopitzke (NAWCAD mentor), for their generous support in mentorship and/or funding our research and enabling student travel to the conference.`,
       images: [
         '/AMPP_2026_Conference/team_photo.jpeg',
         '/AMPP_2026_Conference/nayab_presentation_pic.jpeg',
@@ -47,6 +43,17 @@ We sincerely thank the UTSA Graduate School, the UTSA Department of Mechanical, 
         '/AMPP_2026_Conference/dr_vadde_presentation_pic.jpeg',
         '/AMPP_2026_Conference/jose_presentation_pi.jpeg',
         '/AMPP_2026_Conference/team_pic_2.jpeg'
+      ]
+    },
+    {
+      date: '2026-03-15',
+      title: 'Dr. Brendy Rincon Troconis Honored with AMPP Educator Award',
+      excerpt: 'Dr. Brendy Rincon Troconis receives the prestigious AMPP Educator Award in Honor of Herbert Uhlig during the 2026 AMPP Honoree Night.',
+      content: `The UTSA Corrosion Research Laboratory is proud to announce that Dr. Brendy Rincon Troconis, our Principal Investigator and Associate Professor, has been honored with the 2026 AMPP Educator Award in Honor of Herbert Uhlig.
+
+      This prestigious recognition was presented during the AMPP Honoree Night at the 2026 AMPP Conference & Expo, celebrating Dr. Rincon Troconis's exceptional contributions to education in materials protection and corrosion control. The award is particularly meaningful as it was received during March, Women's History Month—a time dedicated to celebrating women's social, economic, cultural, and professional accomplishments while advocating for gender equality. Dr. Rincon Troconis's achievement exemplifies her commitment to advancing both scientific knowledge and diversity in STEM fields. The Educator Award in Honor of Herbert Uhlig recognizes individuals who have demonstrated outstanding dedication to teaching, mentoring, and inspiring the next generation of corrosion scientists and engineers. Dr. Rincon Troconis has consistently shown unwavering commitment to student development, research excellence, and creating inclusive opportunities in materials science education. Her leadership in establishing the UTSA Corrosion Research Laboratory as a hub for cutting-edge research and student training has made a lasting impact on both the field and the countless students she has mentored throughout her career. We congratulate Dr. Rincon Troconis on this well-deserved honor and celebrate her continued contributions to advancing corrosion science education and research.`,
+      images: [
+        '/AMPP_2026_Conference/award_photos/dr_rincon_pic.jpeg'
       ]
     },
     {
