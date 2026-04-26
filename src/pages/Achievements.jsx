@@ -118,6 +118,30 @@ const Achievements = () => {
 
   const labMemberAchievements = [
     {
+      year: '2026',
+      recipient: 'Nayab A. Ali',
+      title: '1st place AMPP Harvey Herro-Appleman – Applied Materials Protection Technology',
+      description: '2026 1st place AMPP Harvey Herro-Appleman – Applied Materials Protection Technology Category for the poster "Surface Preparation Effects on the Morphology and Corrosion Resistance of Electrodeposited Zn–Si Coatings on Steel."',
+      type: 'Award',
+      image: '/AMPP_2026_Conference/award_photos/nayab_award.jpeg'
+    },
+    {
+      year: '2026',
+      recipient: 'Jorge Escribano',
+      title: '1st place AMPP Marcel Pourbaix – Corrosion Science',
+      description: '2026 1st place AMPP Marcel Pourbaix – Corrosion Science Category for the poster "Significance of Accelerated Electrochemical Methods for Evaluating MOC Boards."',
+      type: 'Award',
+      image: '/AMPP_2026_Conference/award_photos/jorge_award.jpeg'
+    },
+    {
+      year: '2026',
+      recipient: 'David Silva',
+      title: '1st place AMPP David Shifler – Undergraduate Category',
+      description: '2026 1st place AMPP David Shifler – Undergraduate Category for the poster "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds." Co-contributors: Meggan Wolanin and Juan Elizarraras.',
+      type: 'Award',
+      image: '/AMPP_2026_Conference/award_photos/david_award.jpeg'
+    },
+    {
       year: '2025',
       recipient: 'Meggan Wolanin',
       title: '3rd place AMPP Marcel Pourbaix Corrosion Science Award',
@@ -448,6 +472,12 @@ const Achievements = () => {
                       </span>
                     </div>
                   </div>
+                  
+                  {achievement.image && (
+                    <div className="achievement-image">
+                      <img src={achievement.image} alt={`${achievement.recipient} - ${achievement.title}`} />
+                    </div>
+                  )}
                   
                   <h3 className="achievement-title">{achievement.title}</h3>
                   <p className="achievement-description">{achievement.description}</p>

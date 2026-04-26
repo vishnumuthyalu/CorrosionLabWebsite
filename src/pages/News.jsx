@@ -1,10 +1,54 @@
 import { useState } from 'react'
-import { Calendar, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
+import { Calendar, ExternalLink, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react'
 import '../styles/News.css'
 
 const News = () => {
   const [showAllNews, setShowAllNews] = useState(false)
+  const [currentSlideIndices, setCurrentSlideIndices] = useState({})
+
+  const nextSlide = (newsIndex, totalImages) => {
+    setCurrentSlideIndices(prev => ({
+      ...prev,
+      [newsIndex]: ((prev[newsIndex] || 0) + 1) % totalImages
+    }))
+  }
+
+  const prevSlide = (newsIndex, totalImages) => {
+    setCurrentSlideIndices(prev => ({
+      ...prev,
+      [newsIndex]: ((prev[newsIndex] || 0) - 1 + totalImages) % totalImages
+    }))
+  }
   const newsItems = [
+    {
+      date: '2026-03-16',
+      title: 'Outstanding Success at AMPP 2026 Conference & Expo',
+      excerpt: 'Our research group presented 12 presentations and won three first-place awards at the 2026 AMPP Conference in San Antonio, Texas.',
+      content: `We had an incredible experience at the 2026 AMPP: Association for Materials Protection and Performance Conference & Expo! Our research group was proud to contribute 12 presentations in total (6 podium and 6 poster) on various topics.
+
+A special congratulations to our award winners:
+
+• Nayab A. Ali earned 1st place in the Harvey Herro-Appleman – Applied Materials Protection Technology Category for the poster: "Surface Preparation Effects on the Morphology and Corrosion Resistance of Electrodeposited Zn–Si Coatings on Steel."
+
+• Jorge Escribano received 1st place in the Marcel Pourbaix – Corrosion Science Category for the poster: "Significance of Accelerated Electrochemical Methods for Evaluating MOC Boards."
+
+• David Silva, in his first conference and poster competition, won 1st place in the David Shifler – Undergraduate Category for the poster: "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds." Congratulations as well to Meggan Wolanin and Juan Elizarraras who are also part of this project and heavily contributed to this poster! Meggan assisted in training and guiding the undergraduate students.
+
+These achievements reflect the dedication, hard work, and commitment of our students. It was rewarding to see them accomplish their goals!
+
+We sincerely thank the UTSA Graduate School, the UTSA Department of Mechanical, Aerospace, and Industrial Engineering, Twin Hawks, DuPont, and Naval Air Warfare Center Aircraft Division (NAWCAD), especially Steven Kopitzke (NAWCAD mentor), for their generous support in mentorship and/or funding our research and enabling student travel to the conference.`,
+      images: [
+        '/AMPP_2026_Conference/team_photo.jpeg',
+        '/AMPP_2026_Conference/nayab_presentation_pic.jpeg',
+        '/AMPP_2026_Conference/bernardo_presentation_pic.jpeg',
+        '/AMPP_2026_Conference/david_presenation_pic.jpeg',
+        '/AMPP_2026_Conference/luis_presentation_pic.jpeg',
+        '/AMPP_2026_Conference/megan_presentation_pic.jpeg',
+        '/AMPP_2026_Conference/dr_vadde_presentation_pic.jpeg',
+        '/AMPP_2026_Conference/jose_presentation_pi.jpeg',
+        '/AMPP_2026_Conference/team_pic_2.jpeg'
+      ]
+    },
     {
       date: '2023-04-12',
       title: 'Brendy Rincon Troconis receives AMPP Award',
@@ -175,10 +219,6 @@ const News = () => {
     }
   ]
 
-  const upcomingEvents = [
-    // No upcoming events currently scheduled
-  ]
-
   const displayedNews = showAllNews ? newsItems : newsItems.slice(0, 5)
 
   return (
@@ -200,8 +240,7 @@ const News = () => {
       <section className="section">
         <div className="container">
           <div className="news-layout">
-            <div className="main-news">
-              <h2>Recent News</h2>
+            <h2>Recent News</h2>
               <div className="news-list">
                 {displayedNews.map((item, index) => (
                   <article key={index} className="news-item">
@@ -222,7 +261,50 @@ const News = () => {
                     <h3>{item.title}</h3>
                     <p className="excerpt">{item.excerpt}</p>
                     <div className="news-content">
-                      <p>{item.content}</p>
+                      <p style={{ whiteSpace: 'pre-line' }}>{item.content}</p>
+                      {item.images && item.images.length > 0 && (
+                        <div className="news-slideshow">
+                          <div className="slideshow-container">
+                            <button 
+                              className="slideshow-btn prev"
+                              onClick={() => prevSlide(index, item.images.length)}
+                              aria-label="Previous image"
+                            >
+                              <ChevronLeft size={32} />
+                            </button>
+                            
+                            <div className="slideshow-image-container">
+                              <img 
+                                src={item.images[currentSlideIndices[index] || 0]} 
+                                alt={`${item.title} - Photo ${(currentSlideIndices[index] || 0) + 1}`}
+                              />
+                            </div>
+                            
+                            <button 
+                              className="slideshow-btn next"
+                              onClick={() => nextSlide(index, item.images.length)}
+                              aria-label="Next image"
+                            >
+                              <ChevronRight size={32} />
+                            </button>
+                          </div>
+                          
+                          <div className="slideshow-indicators">
+                            {item.images.map((_, imgIndex) => (
+                              <button
+                                key={imgIndex}
+                                className={`indicator ${(currentSlideIndices[index] || 0) === imgIndex ? 'active' : ''}`}
+                                onClick={() => setCurrentSlideIndices(prev => ({ ...prev, [index]: imgIndex }))}
+                                aria-label={`Go to image ${imgIndex + 1}`}
+                              />
+                            ))}
+                          </div>
+                          
+                          <div className="slideshow-counter">
+                            {(currentSlideIndices[index] || 0) + 1} / {item.images.length}
+                          </div>
+                        </div>
+                      )}
                       {item.link && (
                         <a href={item.link} target="_blank" rel="noopener noreferrer" className="read-more-link">
                           Read Full Article <ExternalLink size={16} />
@@ -249,36 +331,6 @@ const News = () => {
                   </button>
                 </div>
               </div>
-            </div>
-
-            <div className="sidebar">
-              {/* Upcoming Events */}
-              <div className="sidebar-section">
-                <h3>Upcoming Events</h3>
-                <div className="events-list">
-                  {upcomingEvents.length > 0 ? (
-                    upcomingEvents.map((event, index) => (
-                      <div key={index} className="event-item">
-                        <div className="event-date">
-                          <Calendar size={18} />
-                          {new Date(event.date).toLocaleDateString('en-US', { 
-                            month: 'short', 
-                            day: 'numeric' 
-                          })}
-                        </div>
-                        <div className="event-details">
-                          <h4>{event.title}</h4>
-                          <p className="event-location">{event.location}</p>
-                          <p className="event-description">{event.description}</p>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <p className="no-events">No upcoming events scheduled at this time.</p>
-                  )}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
