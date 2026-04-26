@@ -35,7 +35,7 @@ const Staff = () => {
     { name: 'Stephanie Garcia', degree: 'ME undergrad', period: 'Summer 2017, Fall 2017, Fall 2018, Spring 2019', currentPosition: 'Now working at Johnson Controls as R&D Mechanical Engineer' },
     { name: 'Tori Walker', degree: 'ME undergrad', period: 'Summer 2017', currentPosition: 'Now working at Midcoast Energy as Pipeline Integrity Engineer' },
     { name: 'Kyle Fernandez', degree: 'ME undergrad', period: 'Summer 2017, Fall 2017, Spring 2018, Summer 2018', currentPosition: 'Now working at Southwest Research Institute as Engineer in the Fire Technology Department' },
-    
+    { name: 'Michelle Vogues', degree: 'ME undergrad', period: 'Spring 2025 to Fall 2025', currentPosition: 'Now working at CPS Energy as Engineering Associate' },
     // High School Alumni
     { name: 'Ella Reinhart', degree: 'BASIS Shavano High School', period: 'Fall 2024- Summer 2025', currentPosition: null },
     { name: 'Diya Nair', degree: 'Keystone School', period: 'Spring 2023- Summer 2024', currentPosition: null },
@@ -261,19 +261,9 @@ const Staff = () => {
        dateJoined: 'Fall 2025'
      },
      {
-       name: 'Jennifer Perez',
-       major: 'Mechanical Engineering',
-       dateJoined: 'Summer 2025'
-     },
-     {
        name: 'Jeronimo De Erausquin',
        major: 'Mechanical Engineering',
        dateJoined: 'Summer 2025'
-     },
-     {
-       name: 'Michelle Vogues',
-       major: 'Mechanical Engineering',
-       dateJoined: 'Spring 2025'
      },
      {
        name: 'Nicole Ituarte Cedillo',
