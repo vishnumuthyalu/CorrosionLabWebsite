@@ -34,7 +34,7 @@ The team had the opportunity to tour the Naval Air Warfare Center Aircraft Divis
 
 This recognition highlights the exceptional quality of student research at our laboratory and the strong collaborative relationship between UTSA and the U.S. Navy in advancing materials science and aerospace safety. We congratulate David, Orlando, and Juan on this outstanding achievement and thank all mentors for their dedication to student development and research excellence.`,
       images: [
-        'public/david_april_award/team.jpeg'
+        '/david_april_award/team.jpeg'
       ]
     },
     {
