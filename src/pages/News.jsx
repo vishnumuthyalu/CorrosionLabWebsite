@@ -21,6 +21,23 @@ const News = () => {
   }
   const newsItems = [
     {
+      date: '2026-04-15',
+      title: 'Undergraduate Research Team Wins Air Talent Most Resourceful Award at NAWCAD',
+      excerpt: 'Our undergraduate research team received the Air Talent Most Resourceful Award for their innovative work on fastener hole cracking prevention at the Naval Air Warfare Center Aircraft Division.',
+      content: `The UTSA Corrosion Research Laboratory proudly announces that our undergraduate research team has been honored with the Air Talent Most Resourceful Award at the Naval Air Warfare Center Aircraft Division (NAWCAD) Research Symposium.
+
+The award-winning project, "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds," was led by an outstanding team of undergraduate students: David Antonio Silva, Orlando Favela, and Juan Elizarraras Hortelano. The team worked under the expert guidance of Navy Mentor Dr. Steven Kopitzke, Academic Mentor Dr. Brendy Rincon Troconis, and Project Mentor Meggan Wolanin.
+
+Aligned with NAWC Forward's Strategic Focus Area to "Optimize Use of NAWCAD Resources," the Air Talent Most Resourceful Award recognizes the project that makes the best use of investment resources to accomplish project goals with limited resources. This achievement demonstrates the team's innovative approach to addressing critical challenges in aerospace materials protection while maximizing resource efficiency.
+
+The team had the opportunity to tour the Naval Air Warfare Center Aircraft Division (NAWCAD) Headquarters at NAS Patuxent River, gaining valuable insights into naval aviation research and operations. The research symposium, where the team delivered both a presentation and poster session, was held at the University System of Maryland Southern Maryland (USMSM) Autonomous Research and Technology (SMART) Building.
+
+This recognition highlights the exceptional quality of student research at our laboratory and the strong collaborative relationship between UTSA and the U.S. Navy in advancing materials science and aerospace safety. We congratulate David, Orlando, and Juan on this outstanding achievement and thank all mentors for their dedication to student development and research excellence.`,
+      images: [
+        'public/david_april_award/team.jpeg'
+      ]
+    },
+    {
       date: '2026-03-16',
       title: 'Outstanding Success at AMPP 2026 Conference & Expo',
       excerpt: 'Our research group presented 12 presentations and won three first-place awards at the 2026 AMPP Conference in San Antonio, Texas.',
