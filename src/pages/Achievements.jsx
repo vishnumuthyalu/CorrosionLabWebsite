@@ -7,6 +7,13 @@ const Achievements = () => {
   const [showAllLab, setShowAllLab] = useState(false)
   const principalInvestigatorAchievements = [
     {
+      year: '2026',
+      title: 'AMPP Educator Award in Honor of Herbert Uhlig',
+      description: '2026 AMPP Educator Award in Honor of Herbert Uhlig, presented during the AMPP Honoree Night. This prestigious award recognizes outstanding contributions to education in materials protection and corrosion control, celebrating achievements during Women\'s History Month in advancing gender equality in STEM fields.',
+      type: 'Award',
+      image: '/AMPP_2026_Conference/award_photos/dr_rincon_award.jpeg'
+    },
+    {
       year: '2024-2025',
       title: 'UTSA KLESSE Fellowship',
       description: '2024 UTSA KLESSE Fellowship (given in Spring 2025).',
@@ -407,6 +414,12 @@ const Achievements = () => {
                       </span>
                     </div>
                   </div>
+                  
+                  {achievement.image && (
+                    <div className="achievement-image">
+                      <img src={achievement.image} alt={`Dr. Brendy Rincon Troconis - ${achievement.title}`} />
+                    </div>
+                  )}
                   
                   <h3 className="achievement-title">{achievement.title}</h3>
                   <p className="achievement-description">{achievement.description}</p>
