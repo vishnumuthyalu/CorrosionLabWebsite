@@ -41,13 +41,12 @@ const Staff = () => {
     { name: 'Diya Nair', degree: 'Keystone School', period: 'Spring 2023- Summer 2024', currentPosition: null },
     
     // Visiting Researchers
-    { name: 'Luis Perdomo-Hurtado', degree: 'Visiting Professor', period: 'Fall 2021', currentPosition: 'Professor at Universidad Autónoma Manizales, Colombia' },
     { name: 'Yesica Raquel Quijada Noriega', degree: 'ChemE MS', period: 'Summer 2019', currentPosition: 'Immersion Research Program, UTSA-UNISON Summer Special Program' },
     { name: 'Eduardo Lodato', degree: 'Chemical Engineering student', period: 'August-September 2019', currentPosition: 'Universidad Rafael Urdaneta, Venezuela' },
     { name: 'Vinicio Ynciarte Leiva', degree: 'Visiting Researcher', period: 'August 2019 - December 2019', currentPosition: null },
 
     // Visiting Scientists
-    {name: 'Dr. Keyvan Daneshvar',degree: 'Visiting Scienties', period: 'Since 2023', currentPosition: null }
+    {name: 'Dr. Keyvan Daneshvar',degree: 'Visiting Scientist', period: 'Since 2023', currentPosition: null }
   ]
 
   // Alumni slideshow navigation (showing 3 at a time)
