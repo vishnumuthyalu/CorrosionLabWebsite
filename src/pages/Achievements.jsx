@@ -126,6 +126,13 @@ const Achievements = () => {
   const labMemberAchievements = [
     {
       year: '2026',
+      recipient: 'David Antonio Silva, Orlando Favela, Juan Elizarraras Hortelano',
+      title: 'NAWCAD Air Talent Most Resourceful Award',
+      description: '2026 NAWCAD Air Talent Most Resourceful Award for the project "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds." Aligned with NAWC Forward\'s Strategic Focus Area to "Optimize Use of NAWCAD Resources," this award recognizes the project that makes the best use of investment resources. Mentors: Dr. Steven Kopitzke (Navy), Dr. Brendy Rincon Troconis (Academic), and Meggan Wolanin (Project).',
+      type: 'Award'
+    },
+    {
+      year: '2026',
       recipient: 'Nayab A. Ali',
       title: '1st place AMPP Harvey Herro-Appleman – Applied Materials Protection Technology',
       description: '2026 1st place AMPP Harvey Herro-Appleman – Applied Materials Protection Technology Category for the poster "Surface Preparation Effects on the Morphology and Corrosion Resistance of Electrodeposited Zn–Si Coatings on Steel."',
