@@ -23,7 +23,7 @@
 .pi-image img {
   width: 100%;
   max-width: 280px;
-  height: 320px;
+  height: 400px;
   object-fit: cover;
   object-position: center 20%;
   border-radius: var(--border-radius);
@@ -602,7 +602,7 @@
 @media (max-width: 480px) {
   .pi-image img {
     max-width: 200px;
-    height: 240px;
+    height: 270px;
   }
 
   .scientist-image img {

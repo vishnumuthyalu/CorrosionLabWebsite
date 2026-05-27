@@ -180,11 +180,11 @@ const Home = () => {
               <div className="pi-achievements">
                 <div className="achievement">
                   <Award size={24} />
-                  <span>2023 AMPP Early-Career Award</span>
+                  <span>2026 AMPP Educator Award in Honor of Herbert Uhlig</span>
                 </div>
                 <div className="achievement">
                   <Award size={24} />
-                  <span>2021 Gulf Research Program Early-Career Research Fellow</span>
+                  <span>2023 AMPP Early-Career Award</span>
                 </div>
               </div>
               <Link to="/staff" className="btn btn-primary">
@@ -193,7 +193,7 @@ const Home = () => {
             </div>
             <div className="pi-image">
               <div className="image-placeholder">
-                <img src="/professor_rincon_headshot.jpg" alt="Dr. Brendy Rincon Troconis" />
+                <img src="/professor_rincon_headshot-modified.png" alt="Dr. Brendy Rincon Troconis" />
               </div>
             </div>
           </div>

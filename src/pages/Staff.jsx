@@ -5,6 +5,7 @@ import '../styles/Staff.css'
 const Staff = () => {
   const [currentAlumniSlide, setCurrentAlumniSlide] = useState(0)
   const [currentGradSlide, setCurrentGradSlide] = useState(0)
+  const [currentVisitingSlide, setCurrentVisitingSlide] = useState(0)
 
   // Alumni data organized by category
   const alumni = [
@@ -38,15 +39,15 @@ const Staff = () => {
     { name: 'Michelle Vogues', degree: 'ME undergrad', period: 'Spring 2025 to Fall 2025', currentPosition: 'Now working at CPS Energy as Engineering Associate' },
     // High School Alumni
     { name: 'Ella Reinhart', degree: 'BASIS Shavano High School', period: 'Fall 2024- Summer 2025', currentPosition: null },
-    { name: 'Diya Nair', degree: 'Keystone School', period: 'Spring 2023- Summer 2024', currentPosition: null },
-    
-    // Visiting Researchers
+    { name: 'Diya Nair', degree: 'Keystone School', period: 'Spring 2023- Summer 2024', currentPosition: null }
+  ]
+
+  const previousVisitingScientists = [
     { name: 'Yesica Raquel Quijada Noriega', degree: 'ChemE MS', period: 'Summer 2019', currentPosition: 'Immersion Research Program, UTSA-UNISON Summer Special Program' },
     { name: 'Eduardo Lodato', degree: 'Chemical Engineering student', period: 'August-September 2019', currentPosition: 'Universidad Rafael Urdaneta, Venezuela' },
     { name: 'Vinicio Ynciarte Leiva', degree: 'Visiting Researcher', period: 'August 2019 - December 2019', currentPosition: null },
-
-    // Visiting Scientists
-    {name: 'Dr. Keyvan Daneshvar',degree: 'Visiting Scientist', period: 'Since 2023', currentPosition: null }
+    { name: 'Dr. Keyvan Daneshvar', degree: 'Visiting Scientist', period: 'Since 2023', currentPosition: null },
+    { name: 'Dr. Rosangel Rojas', degree: 'Visiting Scientist', period: null, currentPosition: null }
   ]
 
   // Alumni slideshow navigation (showing 3 at a time)
@@ -68,6 +69,27 @@ const Staff = () => {
   const getCurrentAlumni = () => {
     const startIndex = currentAlumniSlide * 3
     return alumni.slice(startIndex, startIndex + 3)
+  }
+
+  // Previous Visiting Scientists slideshow navigation
+  const nextVisitingSlide = () => {
+    setCurrentVisitingSlide((prev) => {
+      const maxSlide = Math.ceil(previousVisitingScientists.length / 3) - 1
+      return (prev + 1) % (maxSlide + 1)
+    })
+  }
+
+  const prevVisitingSlide = () => {
+    setCurrentVisitingSlide((prev) => {
+      const maxSlide = Math.ceil(previousVisitingScientists.length / 3) - 1
+      return (prev - 1 + maxSlide + 1) % (maxSlide + 1)
+    })
+  }
+
+  // Get current set of 3 previous visiting scientists to display
+  const getCurrentVisitingScientists = () => {
+    const startIndex = currentVisitingSlide * 3
+    return previousVisitingScientists.slice(startIndex, startIndex + 3)
   }
 
   // Graduate researcher slideshow navigation
@@ -101,8 +123,8 @@ const Staff = () => {
       'Environmentally Assisted Cracking'
     ],
     awards: [
+      '2026 AMPP Educator Award in Honor of Herbert Uhlig',
       '2023 AMPP Early-Career Award',
-      '2021 Gulf Research Program Early-Career Research Fellow (National Academies)'
     ],
     links: {
       googleScholar: 'https://scholar.google.com/citations?hl=en&user=JstfCoVn5w0C',
@@ -137,7 +159,7 @@ const Staff = () => {
         'CP Specialist (No. 8516) from NACE International',
         'Education Director of ALCONPAT International'
       ]
-    },{
+    }/*{
       name: 'Rosangel Rojas, Ph.D',
       title: 'Research Scientist at UTSA',
       image: '/rojas.jpg',
@@ -163,7 +185,7 @@ const Staff = () => {
         'CAPES Scholarship',
         'CNPq Scholarship',
       ]
-    }
+    }*/
   ]
 
   const graduateResearchers = [
@@ -595,6 +617,56 @@ const Staff = () => {
             
             <div className="slide-counter">
               <span>{currentAlumniSlide + 1} / {Math.ceil(alumni.length / 3)}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Previous Visiting Scientists/Researchers */}
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title">Previous Visiting Scientists/Researchers</h2>  
+          <div className="alumni-slideshow">
+            <div className="slideshow-container">
+              <button 
+                className="slide-btn prev-btn" 
+                onClick={prevVisitingSlide}
+                aria-label="Previous visiting scientist"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              
+              <div className="slide-content">
+                <div className="alumni-grid-slideshow">
+                  {getCurrentVisitingScientists().map((scientist, index) => (
+                    <div key={index} className="alumni-card-slideshow">
+                      <div className="alumni-avatar">
+                        {scientist.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <h4>{scientist.name}</h4>
+                      <p className="alumni-degree">{scientist.degree}</p>
+                      {scientist.period && (
+                        <p className="alumni-period">{scientist.period}</p>
+                      )}
+                      {scientist.currentPosition && (
+                        <p className="alumni-position">{scientist.currentPosition}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <button 
+                className="slide-btn next-btn" 
+                onClick={nextVisitingSlide}
+                aria-label="Next visiting scientist"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+            
+            <div className="slide-counter">
+              <span>{currentVisitingSlide + 1} / {Math.ceil(previousVisitingScientists.length / 3)}</span>
             </div>
           </div>
         </div>
