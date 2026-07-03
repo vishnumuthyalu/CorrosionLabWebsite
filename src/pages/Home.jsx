@@ -1,4 +1,4 @@
-import { ArrowRight, Users, Award, BookOpen, Target, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowRight, Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import '../styles/Home.css'
@@ -13,13 +13,6 @@ const Home = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + researchAreas.length) % researchAreas.length)
   }
-
-  const stats = [
-    { icon: <Users size={32} />, value: '13', label: 'Student Researchers' },
-    { icon: <BookOpen size={32} />, value: '16', label: 'Publications' },
-    { icon: <Award size={32} />, value: '44', label: 'Awards' },
-    { icon: <Target size={32} />, value: '10', label: 'Research Areas' }
-  ]
 
   const researchAreas = [
     {
@@ -73,21 +66,6 @@ const Home = () => {
                 Learn More
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="section">
-        <div className="container">
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <div className="stat-icon">{stat.icon}</div>
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
