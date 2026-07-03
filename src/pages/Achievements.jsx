@@ -1,4 +1,4 @@
-import { Award, Trophy, GraduationCap, Users, Calendar, Star, ChevronDown, ChevronUp } from 'lucide-react'
+import { Award, Trophy, GraduationCap, Users, Calendar, Star, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react'
 import { useState } from 'react'
 import '../styles/Achievements.css'
 
@@ -11,13 +11,15 @@ const Achievements = () => {
       title: 'AMPP Educator Award in Honor of Herbert Uhlig',
       description: '2026 AMPP Educator Award in Honor of Herbert Uhlig, presented during the AMPP Honoree Night. This prestigious award recognizes outstanding contributions to education in materials protection and corrosion control, celebrating achievements during Women\'s History Month in advancing gender equality in STEM fields.',
       type: 'Award',
-      image: '/AMPP_2026_Conference/award_photos/dr_rincon_award.jpeg'
+      image: '/AMPP_2026_Conference/award_photos/dr_rincon_award.jpeg',
+      links: [{ label: 'AMPP Official', url: 'https://www.ampp.org/membership/member-resources/awards/2026-award-recipients' }]
     },
     {
       year: '2024-2025',
       title: 'UTSA KLESSE Fellowship',
       description: '2024 UTSA KLESSE Fellowship (given in Spring 2025).',
-      type: 'Fellowship'
+      type: 'Fellowship',
+      links: [{ label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_utsanantonio-klessecollege-fellowship-share-7391708197746663424-2Wy7?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }]
     },
     {
       year: '2024-2025',
@@ -29,7 +31,8 @@ const Achievements = () => {
       year: '2023',
       title: 'Early Career Excellence Award from AMPP',
       description: '2023 "Early Career Excellence Award" from AMPP (Association for Materials Protection & Performance). For her commitment to the advancement of materials protection and corrosion control research and for establishing herself as an inspiring educator and outstanding research leader in corrosion at a minority-serving university.',
-      type: 'Award'
+      type: 'Award',
+      links: [{ label: 'AMPP Official', url: 'https://www.ampp.org/membership/member-resources/awards/2023-award-recipients' }]
     },
     {
       year: '2021',
@@ -126,6 +129,14 @@ const Achievements = () => {
   const labMemberAchievements = [
     {
       year: '2026',
+      recipient: 'Luis Perdomo-Hurtado',
+      title: 'Ruyan Guo and Amar Bhalla Endowed Materials Research Graduate (EMRG) Fellowship',
+      description: 'Selected as one of only two inaugural recipients of the Ruyan Guo and Amar Bhalla Endowed Materials Research Graduate (EMRG) Fellowship, awarded February 10, 2026. This fellowship, offered for the first time, recognizes outstanding graduate students in materials research demonstrating excellence in interdisciplinary, collaborative, and globally minded scientific work.',
+      type: 'Fellowship',
+      links: [{ label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_he-materials-hydrogen-ugcPost-7439901609125576704-vUp8?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }]
+    },
+    {
+      year: '2026',
       recipient: 'David Antonio Silva, Orlando Favela, Juan Elizarraras Hortelano',
       title: 'NAWCAD Air Talent Most Resourceful Award',
       description: '2026 NAWCAD Air Talent Most Resourceful Award for the project "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds." Aligned with NAWC Forward\'s Strategic Focus Area to "Optimize Use of NAWCAD Resources," this award recognizes the project that makes the best use of investment resources. Mentors: Dr. Steven Kopitzke (Navy), Dr. Brendy Rincon Troconis (Academic), and Meggan Wolanin (Project).',
@@ -137,7 +148,11 @@ const Achievements = () => {
       title: '1st place AMPP Harvey Herro-Appleman – Applied Materials Protection Technology',
       description: '2026 1st place AMPP Harvey Herro-Appleman – Applied Materials Protection Technology Category for the poster "Surface Preparation Effects on the Morphology and Corrosion Resistance of Electrodeposited Zn–Si Coatings on Steel."',
       type: 'Award',
-      image: '/AMPP_2026_Conference/award_photos/nayab_award.jpeg'
+      image: '/AMPP_2026_Conference/award_photos/nayab_award.jpeg',
+      links: [
+        { label: 'AMPP Show Daily', url: 'https://showdaily.ampp.org/news/student-poster-winners-announced-at-ampp-2026' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_ampp-ampp2026-utsanantonio-ugcPost-7440642943901835264-vnZa?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
     },
     {
       year: '2026',
@@ -145,7 +160,11 @@ const Achievements = () => {
       title: '1st place AMPP Marcel Pourbaix – Corrosion Science',
       description: '2026 1st place AMPP Marcel Pourbaix – Corrosion Science Category for the poster "Significance of Accelerated Electrochemical Methods for Evaluating MOC Boards."',
       type: 'Award',
-      image: '/AMPP_2026_Conference/award_photos/jorge_award.jpeg'
+      image: '/AMPP_2026_Conference/award_photos/jorge_award.jpeg',
+      links: [
+        { label: 'AMPP Show Daily', url: 'https://showdaily.ampp.org/news/student-poster-winners-announced-at-ampp-2026' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_ampp-ampp2026-utsanantonio-ugcPost-7440642943901835264-vnZa?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
     },
     {
       year: '2026',
@@ -153,14 +172,22 @@ const Achievements = () => {
       title: '1st place AMPP David Shifler – Undergraduate Category',
       description: '2026 1st place AMPP David Shifler – Undergraduate Category for the poster "Fastener Hole Cracking Risk Reduction Through the use of Corrosion Prevention Compounds." Co-contributors: Meggan Wolanin and Juan Elizarraras.',
       type: 'Award',
-      image: '/AMPP_2026_Conference/award_photos/david_award.jpeg'
+      image: '/AMPP_2026_Conference/award_photos/david_award.jpeg',
+      links: [
+        { label: 'AMPP Show Daily', url: 'https://showdaily.ampp.org/news/student-poster-winners-announced-at-ampp-2026' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_ampp-ampp2026-utsanantonio-ugcPost-7440642943901835264-vnZa?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
     },
     {
       year: '2025',
       recipient: 'Meggan Wolanin',
       title: '3rd place AMPP Marcel Pourbaix Corrosion Science Award',
       description: '2025 3rd place AMPP Marcel Pourbaix Corrosion Science Award for the poster "Corrosion Kinetics and Morphology in AA7075/SS316 Galvanic Couples under Environmental and Mechanical Loading."',
-      type: 'Award'
+      type: 'Award',
+      links: [
+        { label: 'AMPP Article', url: 'https://content.ampp.org/materials-performance/article/64/6/8/97587/Winners-Announced-for-AMPP-s-2025-Student-Poster' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_utsa-ampp-corrosion-activity-7321258002500444161-MwKw?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
     },
     {
       year: '2025',
@@ -174,21 +201,33 @@ const Achievements = () => {
       recipient: 'Jorge Escribano',
       title: '1st place AMPP Marcel Pourbaix Corrosion Science',
       description: '2024 1st place AMPP Marcel Pourbaix Corrosion Science for the poster "Evaluating 1-Benzyl-4-Phenyl-1H-1,2,3-Triazole: An Eco-Friendly Organic Inhibitor on Diverse Steel Reinforcements."',
-      type: 'Award'
+      type: 'Award',
+      links: [
+        { label: 'AMPP Article', url: 'https://content.ampp.org/materials-performance/magazine-article/13896/AMPP-Announces-2024-Student-Poster-Session-Winners' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_utsa-ampp2024-corrosion-activity-7171682158216957952-Gzyq?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
     },
     {
       year: '2024',
       recipient: 'Meggan Wolanin',
       title: '2nd place AMPP Mars Fontana Corrosion Engineering',
       description: '2024 2nd place AMPP Mars Fontana Corrosion Engineering for the poster "Galvanic Corrosion in Airframe Alloys under Environmental And Mechanical Loading."',
-      type: 'Award'
+      type: 'Award',
+      links: [
+        { label: 'AMPP Article', url: 'https://content.ampp.org/materials-performance/magazine-article/13896/AMPP-Announces-2024-Student-Poster-Session-Winners' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_utsa-ampp2024-corrosion-activity-7171682158216957952-Gzyq?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
     },
     {
       year: '2024',
       recipient: 'Tasnia Fatima',
       title: '2nd place AMPP Harvey Herro Applied Corrosion Technology',
       description: '2024 2nd place AMPP Harvey Herro Applied Corrosion Technology for the poster "Atmospheric Pitting Corrosion of Additively Manufactured Stainless Steel 316L Fabricated from Carbon Nanotube Containing Feedstock."',
-      type: 'Award'
+      type: 'Award',
+      links: [
+        { label: 'AMPP Article', url: 'https://content.ampp.org/materials-performance/magazine-article/13896/AMPP-Announces-2024-Student-Poster-Session-Winners' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_utsa-ampp2024-corrosion-activity-7171682158216957952-Gzyq?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
     },
     {
       year: '2023',
@@ -430,6 +469,15 @@ const Achievements = () => {
                   
                   <h3 className="achievement-title">{achievement.title}</h3>
                   <p className="achievement-description">{achievement.description}</p>
+                  {achievement.links && achievement.links.length > 0 && (
+                    <div className="achievement-links">
+                      {achievement.links.map((l, i) => (
+                        <a key={i} href={l.url} target="_blank" rel="noopener noreferrer" className="achievement-link">
+                          {l.label} <ExternalLink size={14} />
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )
             })}
@@ -504,6 +552,15 @@ const Achievements = () => {
                   <p className="achievement-recipient">
                     <strong>Recipient:</strong> {achievement.recipient}
                   </p>
+                  {achievement.links && achievement.links.length > 0 && (
+                    <div className="achievement-links">
+                      {achievement.links.map((l, i) => (
+                        <a key={i} href={l.url} target="_blank" rel="noopener noreferrer" className="achievement-link">
+                          {l.label} <ExternalLink size={14} />
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )
             })}

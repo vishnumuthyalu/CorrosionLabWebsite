@@ -60,6 +60,10 @@ This recognition highlights the exceptional quality of student research at our l
         '/AMPP_2026_Conference/dr_vadde_presentation_pic.jpeg',
         '/AMPP_2026_Conference/jose_presentation_pi.jpeg',
         '/AMPP_2026_Conference/team_pic_2.jpeg'
+      ],
+      links: [
+        { label: 'AMPP Show Daily', url: 'https://showdaily.ampp.org/news/student-poster-winners-announced-at-ampp-2026' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_ampp-ampp2026-utsanantonio-ugcPost-7440642943901835264-vnZa?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
       ]
     },
     {
@@ -71,6 +75,50 @@ This recognition highlights the exceptional quality of student research at our l
       This prestigious recognition was presented during the AMPP Honoree Night at the 2026 AMPP Conference & Expo, celebrating Dr. Rincon Troconis's exceptional contributions to education in materials protection and corrosion control. The award is particularly meaningful as it was received during March, Women's History Month—a time dedicated to celebrating women's social, economic, cultural, and professional accomplishments while advocating for gender equality. Dr. Rincon Troconis's achievement exemplifies her commitment to advancing both scientific knowledge and diversity in STEM fields. The Educator Award in Honor of Herbert Uhlig recognizes individuals who have demonstrated outstanding dedication to teaching, mentoring, and inspiring the next generation of corrosion scientists and engineers. Dr. Rincon Troconis has consistently shown unwavering commitment to student development, research excellence, and creating inclusive opportunities in materials science education. Her leadership in establishing the UTSA Corrosion Research Laboratory as a hub for cutting-edge research and student training has made a lasting impact on both the field and the countless students she has mentored throughout her career. We congratulate Dr. Rincon Troconis on this well-deserved honor and celebrate her continued contributions to advancing corrosion science education and research.`,
       images: [
         '/AMPP_2026_Conference/award_photos/dr_rincon_pic.jpeg'
+      ],
+      links: [{ label: 'AMPP Official', url: 'https://www.ampp.org/membership/member-resources/awards/2026-award-recipients' }]
+    },
+    {
+      date: '2026-02-10',
+      title: 'Luis Perdomo-Hurtado Receives Ruyan Guo and Amar Bhalla Endowed Materials Research Graduate (EMRG) Fellowship',
+      excerpt: 'PhD student Luis Perdomo-Hurtado has been selected as one of only two inaugural recipients of the prestigious EMRG Fellowship, recognized for his outstanding research on hydrogen embrittlement.',
+      content: `We are pleased to share that our PhD student, Luis Perdomo-Hurtado, has been selected as a recipient of the Ruyan Guo and Amar Bhalla Endowed Materials Research Graduate (EMRG) Fellowship, awarded on February 10, 2026.
+
+This prestigious fellowship, offered for the first time, recognizes outstanding graduate students in materials research who demonstrate excellence in interdisciplinary, collaborative, and globally minded scientific work. Notably, only two students were selected as inaugural awardees.
+
+Luis' research on hydrogen embrittlement in advanced alloys, combined with his strong experimental, modeling, and collaborative contributions, exemplifies the spirit and mission of this fellowship.
+
+Congratulations Luis!!`,
+      links: [{ label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_he-materials-hydrogen-ugcPost-7439901609125576704-vUp8?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }]
+    },
+    {
+      date: '2025-03-01',
+      title: 'Lab Members Win at AMPP 2025 Student Poster Competition',
+      excerpt: 'Meggan Wolanin earned 3rd place in the Marcel Pourbaix Corrosion Science category at the AMPP 2025 Student Poster Session.',
+      content: `Our laboratory is proud to announce that Meggan Wolanin earned 3rd place in the Marcel Pourbaix Corrosion Science category at the 2025 AMPP Student Poster Session for her poster "Corrosion Kinetics and Morphology in AA7075/SS316 Galvanic Couples under Environmental and Mechanical Loading."
+
+This recognition reflects Meggan's dedication to advancing our understanding of corrosion behavior in airframe alloy systems under combined environmental and mechanical loading conditions. Congratulations Meggan!`,
+      links: [
+        { label: 'AMPP Article', url: 'https://content.ampp.org/materials-performance/article/64/6/8/97587/Winners-Announced-for-AMPP-s-2025-Student-Poster' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_utsa-ampp-corrosion-activity-7321258002500444161-MwKw?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
+      ]
+    },
+    {
+      date: '2024-03-01',
+      title: 'Lab Members Win Multiple Awards at AMPP 2024 Student Poster Competition',
+      excerpt: 'Jorge Escribano (1st), Meggan Wolanin (2nd), and Tasnia Fatima (2nd) earned top awards at the 2024 AMPP Student Poster Session.',
+      content: `Our laboratory had an outstanding showing at the 2024 AMPP Student Poster Session, with three members earning awards:
+
+1st place – Jorge Escribano (Marcel Pourbaix Corrosion Science) for the poster "Evaluating 1-Benzyl-4-Phenyl-1H-1,2,3-Triazole: An Eco-Friendly Organic Inhibitor on Diverse Steel Reinforcements."
+
+2nd place – Meggan Wolanin (Mars Fontana Corrosion Engineering) for the poster "Galvanic Corrosion in Airframe Alloys under Environmental And Mechanical Loading."
+
+2nd place – Tasnia Fatima (Harvey Herro Applied Corrosion Technology) for the poster "Atmospheric Pitting Corrosion of Additively Manufactured Stainless Steel 316L Fabricated from Carbon Nanotube Containing Feedstock."
+
+Congratulations to Jorge, Meggan, and Tasnia on these well-deserved recognitions!`,
+      links: [
+        { label: 'AMPP Article', url: 'https://content.ampp.org/materials-performance/magazine-article/13896/AMPP-Announces-2024-Student-Poster-Session-Winners' },
+        { label: 'LinkedIn Post', url: 'https://www.linkedin.com/posts/brendyrincon_utsa-ampp2024-corrosion-activity-7171682158216957952-Gzyq?utm_source=share&utm_medium=member_desktop&rcm=ACoAABHz064Blke-PtY50ppbjEvCHIsiXGXm1I4' }
       ]
     },
     {
@@ -329,7 +377,15 @@ This recognition highlights the exceptional quality of student research at our l
                           </div>
                         </div>
                       )}
-                      {item.link && (
+                      {item.links && item.links.length > 0 ? (
+                        <div className="news-links">
+                          {item.links.map((l, i) => (
+                            <a key={i} href={l.url} target="_blank" rel="noopener noreferrer" className="read-more-link">
+                              {l.label} <ExternalLink size={16} />
+                            </a>
+                          ))}
+                        </div>
+                      ) : item.link && (
                         <a href={item.link} target="_blank" rel="noopener noreferrer" className="read-more-link">
                           Read Full Article <ExternalLink size={16} />
                         </a>
