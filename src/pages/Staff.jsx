@@ -4,8 +4,8 @@ import '../styles/Staff.css'
 
 const Staff = () => {
   const [currentAlumniSlide, setCurrentAlumniSlide] = useState(0)
-  const [currentGradSlide, setCurrentGradSlide] = useState(0)
   const [currentVisitingSlide, setCurrentVisitingSlide] = useState(0)
+  const [selectedResearcher, setSelectedResearcher] = useState(null)
 
   // Alumni data organized by category
   const alumni = [
@@ -90,15 +90,6 @@ const Staff = () => {
   const getCurrentVisitingScientists = () => {
     const startIndex = currentVisitingSlide * 3
     return previousVisitingScientists.slice(startIndex, startIndex + 3)
-  }
-
-  // Graduate researcher slideshow navigation
-  const nextGradSlide = () => {
-    setCurrentGradSlide((prev) => (prev + 1) % graduateResearchers.length)
-  }
-
-  const prevGradSlide = () => {
-    setCurrentGradSlide((prev) => (prev - 1 + graduateResearchers.length) % graduateResearchers.length)
   }
 
   const principalInvestigator = {
@@ -292,6 +283,18 @@ const Staff = () => {
        major: 'Mechanical Engineering',
        dateJoined: 'Fall 2024'
      },
+     {
+       name: 'Orlando Favela',
+       dateJoined: 'Spring 2026'
+     },
+     {
+       name: 'David Silva',
+       dateJoined: 'Spring 2026'
+     },
+     {
+       name: 'Juan Elizarraras',
+       dateJoined: 'Spring 2026'
+     },
   ]
 
   return (
@@ -460,67 +463,94 @@ const Staff = () => {
       <section className="section section-alt">
         <div className="container">
           <h2 className="section-title">Graduate Researchers</h2>
-          <div className="graduate-slideshow">
-            <div className="slideshow-container">
-              <button 
-                className="slide-btn prev-btn" 
-                onClick={prevGradSlide}
-                aria-label="Previous graduate researcher"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              
-              <div className="researcher-slide">
-                <div className="researcher-card">
-                  <div className="researcher-image">
-                    <img src={graduateResearchers[currentGradSlide].image} alt={graduateResearchers[currentGradSlide].name} />
-                  </div>
-                  <h4>{graduateResearchers[currentGradSlide].name}</h4>
-                  <p className="degree">{graduateResearchers[currentGradSlide].degree}</p>
-                  
-                  <div className="dissertation-info">
-                    <h5>Research Areas</h5>
-                    <p className="dissertation-title">{graduateResearchers[currentGradSlide].dissertationTitle}</p>
-                    <p className="date-joined"><strong>Joined Lab:</strong> {graduateResearchers[currentGradSlide].dateJoined}</p>
-                  </div>
+          <div className="researchers-grid grad-researchers-grid">
+            {graduateResearchers.map((researcher, index) => (
+              <div key={index} className="researcher-card grad-researcher-card">
+                <div className="researcher-image">
+                  <img src={researcher.image} alt={researcher.name} />
+                </div>
+                <h4>{researcher.name}</h4>
+                <p className="degree">{researcher.degree}</p>
 
-                  {graduateResearchers[currentGradSlide].bio && (
-                    <div className="researcher-bio">
-                      <h5>Biography</h5>
-                      <p className="bio-text">{graduateResearchers[currentGradSlide].bio}</p>
-                    </div>
-                  )}
+                <div className="dissertation-info">
+                  <h5>Research Areas</h5>
+                  <p className="dissertation-title">{researcher.dissertationTitle}</p>
+                  <p className="date-joined"><strong>Joined Lab:</strong> {researcher.dateJoined}</p>
+                </div>
 
+                {researcher.bio && (
+                  <div className="researcher-bio">
+                    <h5>Biography</h5>
+                    <p className="bio-text bio-truncated">{researcher.bio}</p>
+                  </div>
+                )}
+
+                <div className="grad-card-footer">
                   <div className="researcher-links">
-                    {graduateResearchers[currentGradSlide].linkedin && (
-                      <a href={graduateResearchers[currentGradSlide].linkedin} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                    {researcher.linkedin && (
+                      <a href={researcher.linkedin} target="_blank" rel="noopener noreferrer" className="researcher-link">
                         LinkedIn <ExternalLink size={14} />
                       </a>
                     )}
-                    {graduateResearchers[currentGradSlide].googleScholar && (
-                      <a href={graduateResearchers[currentGradSlide].googleScholar} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                    {researcher.googleScholar && (
+                      <a href={researcher.googleScholar} target="_blank" rel="noopener noreferrer" className="researcher-link">
                         Google Scholar <ExternalLink size={14} />
                       </a>
                     )}
                   </div>
+                  <button
+                    className="see-more-btn"
+                    onClick={() => setSelectedResearcher(researcher)}
+                  >
+                    See More
+                  </button>
                 </div>
               </div>
-              
-              <button 
-                className="slide-btn next-btn" 
-                onClick={nextGradSlide}
-                aria-label="Next graduate researcher"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
-            
-            <div className="slide-counter">
-              <span>{currentGradSlide + 1} / {graduateResearchers.length}</span>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Graduate Researcher Dialog */}
+      {selectedResearcher && (
+        <div className="grad-dialog-overlay" onClick={() => setSelectedResearcher(null)}>
+          <div className="grad-dialog" onClick={(e) => e.stopPropagation()}>
+            <button className="grad-dialog-close" onClick={() => setSelectedResearcher(null)} aria-label="Close">
+              ×
+            </button>
+            <div className="grad-dialog-image">
+              <img src={selectedResearcher.image} alt={selectedResearcher.name} />
+            </div>
+            <div className="grad-dialog-content">
+              <h3>{selectedResearcher.name}</h3>
+              <p className="degree">{selectedResearcher.degree}</p>
+              <div className="dissertation-info">
+                <h5>Research Areas</h5>
+                <p className="dissertation-title">{selectedResearcher.dissertationTitle}</p>
+                <p className="date-joined"><strong>Joined Lab:</strong> {selectedResearcher.dateJoined}</p>
+              </div>
+              {selectedResearcher.bio && (
+                <div className="researcher-bio">
+                  <h5>Biography</h5>
+                  <p className="bio-text">{selectedResearcher.bio}</p>
+                </div>
+              )}
+              <div className="researcher-links">
+                {selectedResearcher.linkedin && (
+                  <a href={selectedResearcher.linkedin} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                    LinkedIn <ExternalLink size={14} />
+                  </a>
+                )}
+                {selectedResearcher.googleScholar && (
+                  <a href={selectedResearcher.googleScholar} target="_blank" rel="noopener noreferrer" className="researcher-link">
+                    Google Scholar <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Undergraduate Researchers */}
       <section className="section">

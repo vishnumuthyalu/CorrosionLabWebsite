@@ -770,3 +770,153 @@
     right: 0;
   }
 }
+
+/* ── Graduate Researcher Grid – equal-height cards ── */
+.grad-researchers-grid {
+  align-items: stretch;
+}
+
+.grad-researcher-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.grad-researcher-card .dissertation-info {
+  flex-shrink: 0;
+}
+
+.grad-researcher-card .researcher-bio {
+  flex: 1;
+  overflow: hidden;
+}
+
+.bio-truncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.grad-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.see-more-btn {
+  background: none;
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.see-more-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* ── Graduate Researcher Dialog ── */
+.grad-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.grad-dialog {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.grad-dialog-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--background-light);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.grad-dialog-close:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.grad-dialog-image {
+  text-align: center;
+  padding: 2rem 2rem 0;
+}
+
+.grad-dialog-image img {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+}
+
+.grad-dialog-content {
+  padding: 1.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.grad-dialog-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.4rem;
+}
+
+.grad-dialog-content .researcher-bio {
+  text-align: left;
+}
+
+.grad-dialog-content .researcher-links {
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .grad-dialog {
+    max-height: 95vh;
+  }
+  .grad-dialog-image img {
+    width: 120px;
+    height: 145px;
+  }
+}
